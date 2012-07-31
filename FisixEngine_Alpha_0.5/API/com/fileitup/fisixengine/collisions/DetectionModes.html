@@ -1,0 +1,143 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="DetectionModes,com.fileitup.fisixengine.collisions.DetectionModes,PENETRATION,LIMIT_VELOCITY,RAYCAST,HYBRID_RAYCAST" name="keywords">
+<title>com.fileitup.fisixengine.collisions.DetectionModes</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'DetectionModes - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/collisions/DetectionModes.html&amp;com/fileitup/fisixengine/collisions/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;DetectionModes</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#constantSummary">Constants</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class DetectionModes"); titleBar_setSubNav(true,false,false,false,false,false,false,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.collisions</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class DetectionModes</td>
+</tr>
+</table>
+<p></p>Holds constants used to set Collision Detection Modes.
+  
+  <p></p>
+<br>
+<span class="label">Example</span>
+<br>The following example demonstrates how to set an object's collision detection mode
+  <div class='listing'><pre>
+  import com.fileitup.fisixengine.collisions.  import com.fileitup.fisixengine.core.  import com.fileitup.fisixengine.particles.  
+  var myEngine:FisixEngine = new FisixEngine()
+  var p:CircleParticle = myEngine.newCircleParticle(100,100,10)
+  
+  p.setDetectionMode(DetectionModes.HYBRID_VELOCITY)
+  
+  </pre></div>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="constantSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Constants</div>
+<table id="summaryTableConstant" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Constant</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#HYBRID_RAYCAST">HYBRID_RAYCAST</a> : int = 3<div class="summaryTableDescription">[static]This is a happy medium between PENETRATION and RAYCAST.</div>
+</td><td class="summaryTableOwnerCol">DetectionModes</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#LIMIT_VELOCITY">LIMIT_VELOCITY</a> : int = 1<div class="summaryTableDescription">[static]Similar to PENETRATION but limits objects' velocities to the magnitude of their radius in order to prevent tunneling.<br>
+   This method reduces physical accuracy, but is fairly quick.</div>
+</td><td class="summaryTableOwnerCol">DetectionModes</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#PENETRATION">PENETRATION</a> : int = 0<div class="summaryTableDescription">[static]This is the simplest and fastest collision detection mode.</div>
+</td><td class="summaryTableOwnerCol">DetectionModes</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#RAYCAST">RAYCAST</a> : int = 2<div class="summaryTableDescription">[static]Uses the object's last position to find out if a collision occured at any time between the last timestep.<br>
+   This method prevents tunneling, but is also much slower than simple penetration--Use discretely
+   </div>
+</td><td class="summaryTableOwnerCol">DetectionModes</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="constantDetail"></a>
+<div class="detailSectionHeader">Constant detail</div>
+<a name="HYBRID_RAYCAST"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">HYBRID_RAYCAST</td><td class="detailHeaderType">constant</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const HYBRID_RAYCAST:int = 3</code><p>This is a happy medium between PENETRATION and RAYCAST. it only raycasts when the velocity of the object is greater than it's radius.<br>
+   This method is much faster than regular raycasting, but is a bit less accurate. Tunneling may occur in some cases.
+   </p></div>
+<a name="LIMIT_VELOCITY"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">LIMIT_VELOCITY</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const LIMIT_VELOCITY:int = 1</code><p>Similar to PENETRATION but limits objects' velocities to the magnitude of their radius in order to prevent tunneling.<br>
+   This method reduces physical accuracy, but is fairly quick. Usually best with larger objects.
+   </p></div>
+<a name="PENETRATION"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">PENETRATION</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const PENETRATION:int = 0</code><p>This is the simplest and fastest collision detection mode. Use it whenever possible for faster simulations.<br>
+   This mode does not prevent tunneling (fast moving objects moving through other objects
+   </p></div>
+<a name="RAYCAST"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">RAYCAST</td><td class="detailHeaderType">constant</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static const RAYCAST:int = 2</code><p>Uses the object's last position to find out if a collision occured at any time between the last timestep.<br>
+   This method prevents tunneling, but is also much slower than simple penetration--Use discretely
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

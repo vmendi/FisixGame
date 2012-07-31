@@ -1,0 +1,16 @@
+Please keep the following in mind when developing with the engine:
+
+- The Fisix Engine is currently in alpha version, and is still buggy/unstable...
+  please report all bugs so that they can be fixed quickly
+
+- Due to no apparant reason, swf files work about 10 fps slower in an internet browser if the 'wmode' parameter isn't set to 'transparent' or 'opaque'
+  If you find that your fisix application isn't running quickly enough, try sure to change the wmode parameter in your html file
+  (A word of caution, wmode-transparent is known to cause some random problems in firefox)
+
+  *** when compiling the given examples files in flex, wmode will not be 'opqaue' by default, which causes the simulation to run
+      slower than it's supposed to ***
+
+- For some reason, AS 3.0 timers are a bit choppy, so instead of using FisixEngine.startEngine() (which uses a timer)
+  use FisixEngine.mainLoop(dt) within an ENTER_FRAME event listener.
+
+- Have Fun with it!

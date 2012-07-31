@@ -1,0 +1,1258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="CollisionObject,com.fileitup.fisixengine.core.CollisionObject,name,parent,collidable,active,minX,mFixed,mMaterial,mStatic,magnetic,dynamicObjectCollisions,friction,bounce,traction,color,inheritAttributesOnAdd,detectionMode,reactionMode,useRaycasting,lastCollision,myType,type,raycast,fixed,onInit,renderBoundingBox,updateBoundingBox,setMaterial,getMaterial,setDetectionMode,getDetectionMode,setReactionMode,getReactionMode,fireOnCollision,fireAfterCollision,onCollision,afterCollision,thrust,thrustPoint,applyForce,applyForcePoint,pointForce,getNormalAngleAt,getNormalAt,makeStatic,isStatic,fix,aabbIntersection,dispose,unload,onUnload,afterUnload,render" name="keywords">
+<title>com.fileitup.fisixengine.core.CollisionObject</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'CollisionObject - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/core/CollisionObject.html&amp;com/fileitup/fisixengine/core/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;CollisionObject</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class CollisionObject"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.core</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class CollisionObject</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="EngineObject.html">EngineObject</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../core/FisixObject.html">FisixObject</a>, <a href="../primitives/Particle.html">Particle</a>, <a href="../primitives/Surface.html">Surface</a></td>
+</tr>
+</table>
+<p></p>The parent of all objects with physical presence.
+  This class does not represent a specific object, and cannot be added to the simulation.<br>
+  Instead, use particles, surfaces, and polygons
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FisixObject.html#addObject()" target="">FisixObject.addObject()</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#active">active</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to treat this object as a part of the simulation<br>
+   This value may be changed at any time during the simulation
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bounce">bounce</a> : Number = .5<div class="summaryTableDescription">The object's coefficient of reinstiturion.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#collidable">collidable</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to check collisions against this object
+   You may set this value at any time during the sumulation to turn collision detection on/off for this object
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#color">color</a> : int = -1<div class="summaryTableDescription">The object's rendering color.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#dynamicObjectCollisions">dynamicObjectCollisions</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#fixed">fixed</a> : Boolean<div class="summaryTableDescription">A fixed CollisionObject is never influenced by collisions
+   You may change this value at any time
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#friction">friction</a> : Number = 0<div class="summaryTableDescription">The object's coefficient of friction.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#inheritAttributesOnAdd">inheritAttributesOnAdd</a> : Boolean = true<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#lastCollision">lastCollision</a> : <a href="../collisions/CollisionData.html">CollisionData</a>
+<div class="summaryTableDescription">An internal object which stores the information of the object's last collision
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#magnetic">magnetic</a> : Boolean = true<div class="summaryTableDescription">If true, the object is affected by magnets
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#minX">minX</a> : Number<div class="summaryTableDescription">Hold the dimensions of the object's bounding box.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#name">name</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription">The parent of the object.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#raycast">raycast</a> : Boolean<div class="summaryTableDescription">[read-only]An internal property, used by the engine
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#traction">traction</a> : Number = 1<div class="summaryTableDescription">The object's traction.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#type">type</a> : String<div class="summaryTableDescription">[read-only]A string representing the type of object you are dealing with
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#detectionMode">detectionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mFixed">mFixed</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mMaterial">mMaterial</a> : String<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#mStatic">mStatic</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#myType">myType</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#reactionMode">reactionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#useRaycasting">useRaycasting</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#CollisionObject()">CollisionObject</a>()</div>
+<div class="summaryTableDescription">There is no reason to make an instance of this object.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#aabbIntersection()">aabbIntersection</a>(obj:<a href="CollisionObject.html">CollisionObject</a>):Boolean</div>
+<div class="summaryTableDescription">Returns whether or not this object's AABB is intersecting with the given object's AABB
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#applyForce()">applyForce</a>(f:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Applies a uniform force, moving the entire object.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#applyForcePoint()">applyForcePoint</a>(f:<a href="Vector.html">Vector</a>, p:<a href="Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Applies a force at the given point.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fireAfterCollision()">fireAfterCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fireOnCollision()">fireOnCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fix()">fix</a>(f:Boolean = true):void</div>
+<div class="summaryTableDescription">Another way of setting the value 'fixed'.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getDetectionMode()">getDetectionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMaterial()">getMaterial</a>():String</div>
+<div class="summaryTableDescription">The name of the current material applied to the object
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getNormalAngleAt()">getNormalAngleAt</a>(p:<a href="Vector.html">Vector</a>):Number</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getNormalAt()">getNormalAt</a>(p:<a href="Vector.html">Vector</a>, dirVector:<a href="Vector.html">Vector</a> = null):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getReactionMode()">getReactionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#isStatic()">isStatic</a>():Boolean</div>
+<div class="summaryTableDescription">Returns a value indicating whether or not this object was made static.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#makeStatic()">makeStatic</a>():void</div>
+<div class="summaryTableDescription">Makes the object static.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onInit()">onInit</a>():void</div>
+<div class="summaryTableDescription">Called after the object is initiated by a FisixObject to which it was added
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pointForce()">pointForce</a>(point:<a href="Vector.html">Vector</a>, force:Number):void</div>
+<div class="summaryTableDescription">
+   Applies a force value on the object from the given point.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#render()">render</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders a primitive shape of the object to the given Graphics object.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderBoundingBox()">renderBoundingBox</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders a rectangle representing the bounding box to the graphics object
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setDetectionMode()">setDetectionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision detection mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMaterial()">setMaterial</a>(mName:String):void</div>
+<div class="summaryTableDescription">Sets the material of the object
+   This modifies the object's 'friction', 'bounce', 'color' and 'traction' properties.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setReactionMode()">setReactionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision reaction mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#thrust()">thrust</a>(tX:Number, tY:Number, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Moves the object uniformly with the given x,y values and adds the values to its velocity.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#thrustPoint()">thrustPoint</a>(tX:Number, tY:Number, p:<a href="Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Unlike thrust which moves the whole object, thrustPoint() hits the object from the given point, with the given x,y values and adds the values to its velocity.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unload()">unload</a>():void</div>
+<div class="summaryTableDescription">Removes the object from the engine and disposes of it.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateBoundingBox()">updateBoundingBox</a>():void</div>
+<div class="summaryTableDescription">Updates the bounding box of the object.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#afterCollision()">afterCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action after a collision is resolved
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#afterUnload()">afterUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions after the object has been unloaded.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onCollision()">onCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action at the time a collision is detected
+   </div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions once the object is unloaded.</div>
+</td><td class="summaryTableOwnerCol">CollisionObject</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="active"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">active</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var active:Boolean = true</code><p>Tells the engine whether or not to treat this object as a part of the simulation<br>
+   This value may be changed at any time during the simulation
+   </p></div>
+<a name="bounce"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bounce</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var bounce:Number = .5</code><p>The object's coefficient of reinstiturion.
+   changing this value overrides the value set by setMaterial().
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#setMaterial()" target="">setMaterial()</a>
+</div>
+</div>
+<a name="collidable"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">collidable</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var collidable:Boolean = true</code><p>Tells the engine whether or not to check collisions against this object
+   You may set this value at any time during the sumulation to turn collision detection on/off for this object
+   </p></div>
+<a name="color"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">color</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var color:int = -1</code><p>The object's rendering color.
+   changing this value overrides the value set by setMaterial().
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#setMaterial()" target="">setMaterial()</a>
+</div>
+</div>
+<a name="detectionMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">detectionMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var detectionMode:int = 0</code>
+</div>
+<a name="dynamicObjectCollisions"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dynamicObjectCollisions</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var dynamicObjectCollisions:Boolean = false</code>
+</div>
+<a name="fixed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fixed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>fixed:Boolean</code>&nbsp;&nbsp;[read-write]<p>A fixed CollisionObject is never influenced by collisions
+   You may change this value at any time
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get fixed():Boolean</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set fixed(value:Boolean):void</code>
+<br>
+</div>
+<a name="friction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">friction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var friction:Number = 0</code><p>The object's coefficient of friction.
+   changing this value overrides the value set by setMaterial().
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#setMaterial()" target="">setMaterial()</a>
+</div>
+</div>
+<a name="inheritAttributesOnAdd"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">inheritAttributesOnAdd</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var inheritAttributesOnAdd:Boolean = true</code>
+</div>
+<a name="lastCollision"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">lastCollision</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var lastCollision:<a href="../collisions/CollisionData.html">CollisionData</a></code><p>An internal object which stores the information of the object's last collision
+   </p></div>
+<a name="magnetic"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">magnetic</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var magnetic:Boolean = true</code><p>If true, the object is affected by magnets
+   </p></div>
+<a name="mFixed"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mFixed</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var mFixed:Boolean = false</code>
+</div>
+<a name="minX"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">minX</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var minX:Number</code><p>Hold the dimensions of the object's bounding box.
+   These values should not be set manually
+   </p></div>
+<a name="mMaterial"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mMaterial</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var mMaterial:String</code>
+</div>
+<a name="mStatic"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">mStatic</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var mStatic:Boolean = false</code>
+</div>
+<a name="myType"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">myType</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var myType:String = ""</code>
+</div>
+<a name="name"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">name</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var name:String = ""</code>
+</div>
+<a name="parent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">parent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var parent:<a href="../core/FisixObject.html">FisixObject</a></code><p>The parent of the object. this value is automatically set when an object is added to a FisixObject,
+   so refrain from changing it manually
+   
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FisixObject.html#addObject()" target="">FisixObject.addObject()</a>
+</div>
+</div>
+<a name="raycast"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">raycast</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>raycast:Boolean</code>&nbsp;&nbsp;[read-only]<p>An internal property, used by the engine
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get raycast():Boolean</code>
+<br>
+</div>
+<a name="reactionMode"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">reactionMode</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var reactionMode:int = 0</code>
+</div>
+<a name="traction"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">traction</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var traction:Number = 1</code><p>The object's traction.
+   changing this value overrides the value set by setMaterial().
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#setMaterial()" target="">setMaterial()</a>
+</div>
+</div>
+<a name="type"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">type</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>type:String</code>&nbsp;&nbsp;[read-only]<p>A string representing the type of object you are dealing with
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get type():String</code>
+<br>
+</div>
+<a name="useRaycasting"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">useRaycasting</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var useRaycasting:Boolean = false</code>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="CollisionObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">CollisionObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function CollisionObject()</code><p>There is no reason to make an instance of this object. it cannot be added to the engine
+   </p></div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="aabbIntersection()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">aabbIntersection</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function aabbIntersection(obj:<a href="CollisionObject.html">CollisionObject</a>):Boolean</code><p>Returns whether or not this object's AABB is intersecting with the given object's AABB
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">obj</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
+</tr>
+</table>
+</div>
+<a name="afterCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">afterCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function afterCollision(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</code><p>Override this function to perform an action after a collision is resolved
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../collisions/CollisionData.html">CollisionData</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">afterCollision()</div>
+</div>
+<a name="afterUnload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">afterUnload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function afterUnload():void</code><p>Override this method to perform actions after the object has been unloaded.
+   This method is called after the object has been removed from the engine and disposed.
+   </p></div>
+<a name="applyForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applyForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function applyForce(f:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</code><p>
+   Applies a uniform force, moving the entire object. Use this method to simulate simple collision impact.
+   For more physically accurate results, use applyForcePoint()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkAA</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#applyForcePoint()" target="">applyForcePoint()</a>
+</div>
+</div>
+<a name="applyForcePoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applyForcePoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function applyForcePoint(f:<a href="Vector.html">Vector</a>, p:<a href="Vector.html">Vector</a>):void</code><p>
+   Applies a force at the given point. Note that the point must be in global space
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+</table>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispose():void</code>
+</div>
+<a name="fireAfterCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fireAfterCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fireAfterCollision():void</code>
+</div>
+<a name="fireOnCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fireOnCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fireOnCollision():void</code>
+</div>
+<a name="fix()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fix</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fix(f:Boolean = true):void</code><p>Another way of setting the value 'fixed'. Note that the default value is true, so writing obj.fix() will set obj.fixed to true.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="getDetectionMode()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getDetectionMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getDetectionMode():int</code><p>
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash; An integer value representing the object's collision detection mode.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../collisions/DetectionModes.html" target="">com.fileitup.fisixengine.collisions.DetectionModes</a>
+</div>
+</div>
+<a name="getMaterial()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMaterial</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMaterial():String</code><p>The name of the current material applied to the object
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>String</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../materials/MaterialFactory.html#getMaterial()" target="">com.fileitup.fisixengine.materials.MaterialFactory.getMaterial()</a>
+</div>
+</div>
+<a name="getNormalAngleAt()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getNormalAngleAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getNormalAngleAt(p:<a href="Vector.html">Vector</a>):Number</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="getNormalAt()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getNormalAt</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getNormalAt(p:<a href="Vector.html">Vector</a>, dirVector:<a href="Vector.html">Vector</a> = null):<a href="../core/Vector.html">Vector</a></code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">dirVector</span>:<a href="Vector.html">Vector</a></code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/Vector.html">Vector</a></code></td>
+</tr>
+</table>
+</div>
+<a name="getReactionMode()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getReactionMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getReactionMode():int</code><p>
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash; An integer value representing the object's collision reaction mode.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../collisions/ReactionModes.html" target="">com.fileitup.fisixengine.collisions.ReactionModes</a>
+</div>
+</div>
+<a name="isStatic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">isStatic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function isStatic():Boolean</code><p>Returns a value indicating whether or not this object was made static.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Boolean</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">makeStatic()</div>
+</div>
+<a name="makeStatic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">makeStatic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function makeStatic():void</code><p>Makes the object static. Once this function is called, an object cannot be made dynamic again.
+   By calling this you are telling the engine that this object will never move. This helps to optimize collision detection with things like
+   terrains and unmovable obstacles
+   </p></div>
+<a name="onCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onCollision(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</code><p>Override this function to perform an action at the time a collision is detected
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../collisions/CollisionData.html">CollisionData</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">afterCollision()</div>
+</div>
+<a name="onInit()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onInit</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function onInit():void</code><p>Called after the object is initiated by a FisixObject to which it was added
+   </p></div>
+<a name="onUnload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onUnload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onUnload():void</code><p>Override this method to perform actions once the object is unloaded.
+   This method is called before anything is actually unloaded
+   </p></div>
+<a name="pointForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pointForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pointForce(point:<a href="Vector.html">Vector</a>, force:Number):void</code><p>
+   Applies a force value on the object from the given point.
+   The farther the object is from the point, the less it is affected.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="render()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function render(g:Graphics):void</code><p>Renders a primitive shape of the object to the given Graphics object.
+   Usually this method is automatically invoked by the engine, but you may use it to render individual objects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+</div>
+<a name="renderBoundingBox()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderBoundingBox</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderBoundingBox(g:Graphics):void</code><p>Renders a rectangle representing the bounding box to the graphics object
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code> &mdash; A graphics object to render to
+   </td>
+</tr>
+</table>
+</div>
+<a name="setDetectionMode()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setDetectionMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setDetectionMode(m:int):void</code><p> Sets the collision detection mode to be used by the object
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:int</code> &mdash; an integer representing the collision detection mode.<br>Use the DetectionModes class's constants as a value
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../collisions/DetectionModes.html" target="">com.fileitup.fisixengine.collisions.DetectionModes</a>
+</div>
+</div>
+<a name="setMaterial()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMaterial</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMaterial(mName:String):void</code><p>Sets the material of the object
+   This modifies the object's 'friction', 'bounce', 'color' and 'traction' properties.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mName</span>:String</code> &mdash; the name of the material as given when the material was created
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../materials/MaterialFactory.html#addMaterial()" target="">com.fileitup.fisixengine.materials.MaterialFactory.addMaterial()</a>
+</div>
+</div>
+<a name="setReactionMode()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setReactionMode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setReactionMode(m:int):void</code><p> Sets the collision reaction mode to be used by the object
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:int</code> &mdash; an integer representing the collision reaction mode.<br>
+   Use the CollisionModes class's constants as a value
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">com.fileitup.fisixengine.collisions.CollisionModes</div>
+</div>
+<a name="thrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function thrust(tX:Number, tY:Number, checkAA:Boolean = true):void</code><p>
+   Moves the object uniformly with the given x,y values and adds the values to its velocity.
+   Refrain from using this method to avoid penetration. Instead, use applyForce()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tX</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tY</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkAA</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#applyForce()" target="">applyForce()</a>
+</div>
+</div>
+<a name="thrustPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrustPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function thrustPoint(tX:Number, tY:Number, p:<a href="Vector.html">Vector</a>):void</code><p>
+   Unlike thrust which moves the whole object, thrustPoint() hits the object from the given point, with the given x,y values and adds the values to its velocity.
+   This is more realistically accurate than thrust().
+   Refrain from using this method to avoid penetration. Instead, use applyForcePoint()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tX</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tY</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/CollisionObject.html#applyForcePoint()" target="">applyForcePoint()</a>
+</div>
+</div>
+<a name="unload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unload():void</code><p>Removes the object from the engine and disposes of it.
+   Use this function to cleanly remove an object from the memory
+   </p></div>
+<a name="updateBoundingBox()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateBoundingBox</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateBoundingBox():void</code><p>Updates the bounding box of the object.
+   This is an internal methods that is called many times a frame. Calling it manually won't do much.
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

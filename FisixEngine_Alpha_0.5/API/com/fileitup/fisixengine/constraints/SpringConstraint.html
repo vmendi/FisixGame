@@ -1,0 +1,665 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="SpringConstraint,com.fileitup.fisixengine.constraints.SpringConstraint,particleA,particleB,restLengthSquared,restMinSquared,restLength,min,max,solve,solveConstraint,getAngle,render,dispose,constraintAll,constraintTwoLists,constraintChain" name="keywords">
+<title>com.fileitup.fisixengine.constraints.SpringConstraint</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'SpringConstraint - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/constraints/SpringConstraint.html&amp;com/fileitup/fisixengine/constraints/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;SpringConstraint</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class SpringConstraint"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.constraints</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class SpringConstraint</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">SpringConstraint <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../constraints/StickConstraint.html">StickConstraint</a></td>
+</tr>
+</table>
+<p></p>Connects two objects to eachother.
+  <p>
+  The spring constraint is the most basic type of constraint, and is used to build both rigid and soft bodies.
+  The StickConstraint is a derivative of the SpringConstraint who's stiffness value is always 1.
+  </p>
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="StickConstraint.html" target="">StickConstraint</a>
+<br>com.fileitup.fisixengine.primitives.constraint</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Constraint.html#breakPoint">breakPoint</a> : Number<div class="summaryTableDescription">The point at which a constraint should be broken.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Constraint.html#broken">broken</a> : Boolean<div class="summaryTableDescription">Tells you whether or not a constraint is currently broken.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#max">max</a> : Number<div class="summaryTableDescription">[write-only]The upper range of the constraint.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#min">min</a> : Number<div class="summaryTableDescription">[write-only]The lower range of the constraint.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Constraint.html#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#particleA">particleA</a> : <a href="../primitives/Particle.html">Particle</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#particleB">particleB</a> : <a href="../primitives/Particle.html">Particle</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#restLength">restLength</a> : Number<div class="summaryTableDescription">The length that the constraint will attempt to maintain.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Constraint.html#stiffness">stiffness</a> : Number<div class="summaryTableDescription">A value between 0 - 1 representing the stiffness of the constraint.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Constraint.html#unloadOnBreak">unloadOnBreak</a> : Boolean = true<div class="summaryTableDescription">When true, the constraint is removed from the simulation when broken.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#restLengthSquared">restLengthSquared</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#restMinSquared">restMinSquared</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#SpringConstraint()">SpringConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, tStiff:Number = 0.5, rLen:Number = -1)</div>
+<div class="summaryTableDescription">Creates a SpringConstraint object.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#constraintAll()">constraintAll</a>(fis:<a href="../core/FisixObject.html">FisixObject</a>, arr:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</div>
+<div class="summaryTableDescription">[static]A static method for quickly constraining a list of objects to eachother.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#constraintChain()">constraintChain</a>(fis:<a href="../core/FisixObject.html">FisixObject</a>, arr:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</div>
+<div class="summaryTableDescription">[static]A static method for quickly constraining a list of objects in a chain.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#constraintTwoLists()">constraintTwoLists</a>(fis:<a href="../core/FisixObject.html">FisixObject</a>, arrA:Array, arrB:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</div>
+<div class="summaryTableDescription">[static]A static method for quickly constraining two lists of of objects to eachother.</div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getAngle()">getAngle</a>():Number</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#render()">render</a>(g:Graphics):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Constraint.html#setMinMax()">setMinMax</a>(minimum:Number, maximum:Number):void</div>
+<div class="summaryTableDescription">Sets both min and max values in one line
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#solve()">solve</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Constraint.html#unload()">unload</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Constraint.html#breakConstraint()">breakConstraint</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Constraint.html#onBreak()">onBreak</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Constraint.html#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Constraint.html">Constraint</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#solveConstraint()">solveConstraint</a>(len:Number, len2:Number):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">SpringConstraint</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="max"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">max</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>max:Number</code>&nbsp;&nbsp;[write-only]<p>The upper range of the constraint.
+   </p><p>
+   By setting this value, you are disabling the use of the restLength property, so it's good practice to set both the min and max values at the same time.
+   <br>
+   Note that valid values are always positive values.
+   <br>
+   In order to disable the maximum bound, set this property to a negative value.
+   </p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set max(value:Number):void</code>
+<br>
+</div>
+<a name="min"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">min</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>min:Number</code>&nbsp;&nbsp;[write-only]<p>The lower range of the constraint.
+   </p><p>
+   By setting this value, you are disabling the use of the restLength property, so it's good practice to set both the min and max values at the same time.
+   <br>
+   Note that valid values are always positive values.
+   <br>
+   In order to disable the minimum bound, set this property to a negative value.
+   </p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set min(value:Number):void</code>
+<br>
+</div>
+<a name="particleA"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">particleA</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var particleA:<a href="../primitives/Particle.html">Particle</a></code>
+</div>
+<a name="particleB"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">particleB</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var particleB:<a href="../primitives/Particle.html">Particle</a></code>
+</div>
+<a name="restLength"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">restLength</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>restLength:Number</code>&nbsp;&nbsp;[read-write]<p>The length that the constraint will attempt to maintain.
+   </p><p>
+   For spring and stick constraints, this represents a pixel distance
+   <br>For angular constraints, this represents a degree value between 0 and 360.
+   <br>For more information about angle measures in angular constraints, see the documentation for the AngularConstraint class
+   <br><br>
+   <b>Note</b> that by setting this value you disable the use of min/max values (in other words, the constraint is no longer bound to a range, but only one value)
+   <br><br>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get restLength():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set restLength(value:Number):void</code>
+<br>
+</div>
+<a name="restLengthSquared"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">restLengthSquared</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var restLengthSquared:Number</code>
+</div>
+<a name="restMinSquared"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">restMinSquared</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var restMinSquared:Number</code>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="SpringConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">SpringConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function SpringConstraint(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, tStiff:Number = 0.5, rLen:Number = -1)</code><p>Creates a SpringConstraint object.
+   </p><p></p>
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pA</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; the first object to constraint
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pB</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; the second object to constraint
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tStiff</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; the stiffness of the constraint - a value between 0 and 1
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rLen</span>:Number</code> (default = <code>-1</code>)<code></code> &mdash; the rest length of the constraint. leave this at -1 to use the current distance between pA and pB
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="constraintAll()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraintAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function constraintAll(fis:<a href="../core/FisixObject.html">FisixObject</a>, arr:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</code><p>A static method for quickly constraining a list of objects to eachother.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fis</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; The FisixObject in which the constraints will be created.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">arr</span>:Array</code> &mdash; An array of Particles to be constrained to eachother.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stiffness</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; The stiffness of the created springs
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">breakPoint</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The breakPoint of the created springs. leave at 0 for unbreakable springs.
+   
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>The following code constraints 4 particles to eachother to form a box: 
+   <div class='listing'><pre>
+   var box:FisixObject = new FisixObject()
+   var p1:CircleParticle = box.newCircleParticle(0,0,20)
+   var p2:CircleParticle = box.newCircleParticle(20,0,20)
+   var p3:CircleParticle = box.newCircleParticle(20,20,20)
+   var p4:CircleParticle = box.newCircleParticle(0,20,20)
+   
+   //you can constraint all these particles like so:
+   SpringConstraint.constraintAll(box.particles)
+   //or like so
+   //SpringConstraint.constraintAll([p1,p2,p3,p4])
+   </pre></div>
+   <p></p>
+</div>
+<a name="constraintChain()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraintChain</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function constraintChain(fis:<a href="../core/FisixObject.html">FisixObject</a>, arr:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</code><p>A static method for quickly constraining a list of objects in a chain. The first particle will be constrained to the second particle, which will be constrained to the third particle, and so on...
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fis</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; The FisixObject in which the constraints will be created.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">arr</span>:Array</code> &mdash; An array of Particles to be constrained into a chain.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stiffness</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; The stiffness of the created springs
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">breakPoint</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The breakPoint of the created springs. leave at 0 for unbreakable springs.
+   
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>The following code constraints 4 particles to eachother to form a chain: 
+   <div class='listing'><pre>
+   var box:FisixObject = new FisixObject()
+   var p1:CircleParticle = box.newCircleParticle(0,0,20)
+   var p2:CircleParticle = box.newCircleParticle(20,0,20)
+   var p3:CircleParticle = box.newCircleParticle(20,20,20)
+   var p4:CircleParticle = box.newCircleParticle(0,20,20)
+   
+   //you can constraint all these particles like so:
+   SpringConstraint.constraintChain(box.particles)
+   //or like so
+   //SpringConstraint.constraintChain([p1,p2,p3,p4])
+   </pre></div>
+   <p></p>
+</div>
+<a name="constraintTwoLists()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraintTwoLists</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function constraintTwoLists(fis:<a href="../core/FisixObject.html">FisixObject</a>, arrA:Array, arrB:Array, stiffness:Number = 0.5, breakPoint:Number = 0):void</code><p>A static method for quickly constraining two lists of of objects to eachother.
+   All the objects in the first list will be constrained to all the objects in the second list.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">fis</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; The FisixObject in which the constraints will be created.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">arrA</span>:Array</code> &mdash; The first array of Particles to be constrained.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">arrB</span>:Array</code> &mdash; The other array of Particles to be constrained.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stiffness</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; The stiffness of the created springs
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">breakPoint</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The breakPoint of the created springs. leave at 0 for unbreakable springs.
+   
+   </td>
+</tr>
+</table>
+<br>
+<span class="label">Example</span>
+<br>The following code constraints 2 lists of particles to eachother:
+   <div class='listing'><pre>
+   var box:FisixObject = new FisixObject()
+   var p1:CircleParticle = box.newCircleParticle(0,0,20)
+   var p2:CircleParticle = box.newCircleParticle(20,0,20)
+   var p3:CircleParticle = box.newCircleParticle(20,20,20)
+   var p4:CircleParticle = box.newCircleParticle(0,20,20)
+   
+   SpringConstraint.constraintTwoLists([p1,p2],[p3,p4])
+   //note that p1 and p2 will be constrained to p3 and p4
+   //but p1 won't be constrained to p2, and neither will p3 be to p4
+   </pre></div>
+   <p></p>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function dispose():void</code>
+</div>
+<a name="getAngle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getAngle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getAngle():Number</code>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="render()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function render(g:Graphics):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+</div>
+<a name="solve()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solve</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function solve():void</code>
+</div>
+<a name="solveConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solveConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected override function solveConstraint(len:Number, len2:Number):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">len</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">len2</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

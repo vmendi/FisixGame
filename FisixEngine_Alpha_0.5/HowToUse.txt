@@ -1,0 +1,31 @@
+How to include The FisixEngine swc in your flex project:
+
+1. Create a new Actionscript project in flex
+2. Go to Project->properties
+3. On the left, select 'Actionscript Build Path'
+4. In the window on the right select the tab 'Library path'
+5. Click 'Add SWC...'
+6. navigate to the file FisixEngine.swc (located in the bin folder of this package)
+7. You are done..
+
+	to test if it works, create a new class in your project and call it 'FisixTest'
+
+	paste the following code in your new class:
+
+- code ----------------------------------------------------------------------
+
+package{
+	import com.fileitup.fisixengine.core.Vector;
+	import flash.display.MovieClip;
+	
+	public class FisixTest extends MovieClip{
+		var vector1:Vector = new Vector(1,0);
+	}
+}
+
+----------------------------------------------------------------------
+
+
+
+if it compiles, you are ready to start!
+Have Fun :)

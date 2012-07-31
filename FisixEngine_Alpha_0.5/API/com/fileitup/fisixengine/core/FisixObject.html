@@ -1,0 +1,3802 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="FisixObject,com.fileitup.fisixengine.core.FisixObject,particles,particles,guides,guides,constraints,constraints,surfaces,surfaces,polygons,fisixObjects,fisixObjects,thrusts,thrusts,containers,containers,magnets,magnets,displayAttachers,bounds,innerCollisions,renderBoundingBoxes,drag,axisAligned,boundsCollisions,iterations,integrate,setIterations,getIterations,applyForce,thrust,setVelocity,fireOnChildCollision,fireAfterChildCollision,onChildCollision,afterChildCollision,addObject,removeObject,addDisplayAttacher,removeDisplayAttacher,addThrust,removeThrust,addConstraint,removeConstraint,addContainer,removeContainer,addMagnet,removeMagnet,newCircleParticle,newGuideParticle,newWheelParticle,newSurface,newDynamicSurface,newFisixObject,newStickConstraint,newSpringConstraint,newAngularConstraint,newCircleContainer,newWheelContainer,newThrust,newMagnet,newDisplayAttacher,newDisplayAttacher2,newDisplayAttacher3,newConstraintAttacher,newWheelAttacher,newSurfaceAttacher,newParticleAttacher,getCenter,rotateAll,rotationalThrust,rotationalForce,setCenter,move,constraintAllParticles,setBounds,getBounds,makeStatic,staticUpdate,setFixed,updateDisplays,setAllDetectionModes,setAllReactionModes,setFriction,setBounce,setTraction,setMagnetic,setDrag,render,renderConstraints,renderParticles,renderGuides,renderSurfaces,renderPolygons,renderMagnets,renderFisixObjects,initChild,pickParticle,scale,flipJoints,explode,pointForce,dispose" name="keywords">
+<title>com.fileitup.fisixengine.core.FisixObject</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FisixObject - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/core/FisixObject.html&amp;com/fileitup/fisixengine/core/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FisixObject</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FisixObject"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.core</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FisixObject</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">FisixObject <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../core/FisixEngine.html">FisixEngine</a>, <a href="../resources/FractalTerrain.html">FractalTerrain</a>, <a href="../resources/Rope.html">Rope</a></td>
+</tr>
+</table>
+<p></p> The main class of the engine. This is used as a way of grouping objects
+  <p>
+  In order to achieve better performance, divide the objects in your code
+  into logical FisixObjects. for example, a 4x4 car FisixObject might contain
+  two ParticleWheels, a child FisixObjects which holds the body, and a towing rope (there's an idea for a game right there ;))
+  </p>
+  <p>It's important to note that a FisixObject has no real physical presence in the engine.
+  It can be seen as a way of grouping objects together for a more logical workflow.
+  A FisixObject has no explicit x and y positions, although the center point of
+  all it's children may be retrieved at any time through the getCenter() method
+  </p>
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#getCenter()" target="">getCenter()</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#active">active</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to treat this object as a part of the simulation<br>
+   This value may be changed at any time during the simulation
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#axisAligned">axisAligned</a> : Boolean = false<div class="summaryTableDescription">When set to true, the FisixObject will be Rigid and Axis-Aligned.<br>
+   When the FisixObject is 'axisAligned', all the Particles within will always maintain the same distance to eachother.<br>
+   Additionally, the entire object will not rotate.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#bounce">bounce</a> : Number = .5<div class="summaryTableDescription">The object's coefficient of reinstiturion.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#boundsCollisions">boundsCollisions</a> : Boolean = false<div class="summaryTableDescription">When true, all children of the FisixObject will be confined to the boundaries set by setBounds()
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#collidable">collidable</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to check collisions against this object
+   You may set this value at any time during the sumulation to turn collision detection on/off for this object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#color">color</a> : int = -1<div class="summaryTableDescription">The object's rendering color.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#constraints">constraints</a> : Array<div class="summaryTableDescription">an array containing all of the Constraints in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#constraints">constraints</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#containers">containers</a> : Array<div class="summaryTableDescription">an array containing all of the Containers in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#containers">containers</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#displayAttachers">displayAttachers</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#drag">drag</a> : Number = 0<div class="summaryTableDescription">A value between 0 - 1 representing the amount of drag to apply on all children of the object.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#dynamicObjectCollisions">dynamicObjectCollisions</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#fisixObjects">fisixObjects</a> : Array<div class="summaryTableDescription">an array containing all of the FisixObjects in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#fisixObjects">fisixObjects</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#fixed">fixed</a> : Boolean<div class="summaryTableDescription">A fixed CollisionObject is never influenced by collisions
+   You may change this value at any time
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#friction">friction</a> : Number = 0<div class="summaryTableDescription">The object's coefficient of friction.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#guides">guides</a> : Array<div class="summaryTableDescription">an array containing all of the GuideParticles in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#guides">guides</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#inheritAttributesOnAdd">inheritAttributesOnAdd</a> : Boolean = true<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#innerCollisions">innerCollisions</a> : Boolean = true<div class="summaryTableDescription">When true, objects within the FisixObject will collide with among themselves.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#lastCollision">lastCollision</a> : <a href="../collisions/CollisionData.html">CollisionData</a>
+<div class="summaryTableDescription">An internal object which stores the information of the object's last collision
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#magnetic">magnetic</a> : Boolean = true<div class="summaryTableDescription">If true, the object is affected by magnets
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#magnets">magnets</a> : Array<div class="summaryTableDescription">an array containing all of the Magnets in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#magnets">magnets</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#minX">minX</a> : Number<div class="summaryTableDescription">Hold the dimensions of the object's bounding box.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#name">name</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription">The parent of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#particles">particles</a> : Array<div class="summaryTableDescription">an array containing all of the Particles in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#particles">particles</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#polygons">polygons</a> : Array<div class="summaryTableDescription">an array containing all of the Polygons in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#raycast">raycast</a> : Boolean<div class="summaryTableDescription">An internal property, used by the engine
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#renderBoundingBoxes">renderBoundingBoxes</a> : Boolean = false<div class="summaryTableDescription">When true, calling render() will also render the bounding boxes of all children objects
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#surfaces">surfaces</a> : Array<div class="summaryTableDescription">an array containing all of the Surfaces in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#surfaces">surfaces</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#thrusts">thrusts</a> : Array<div class="summaryTableDescription">an array containing all of the Thrusts in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#thrusts">thrusts</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#traction">traction</a> : Number = 1<div class="summaryTableDescription">The object's traction.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#type">type</a> : String<div class="summaryTableDescription">A string representing the type of object you are dealing with
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#bounds">bounds</a> : <a href="../utils/BoundingBox.html">BoundingBox</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#detectionMode">detectionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#iterations">iterations</a> : int = 3<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#mFixed">mFixed</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#mMaterial">mMaterial</a> : String<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#mStatic">mStatic</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#myType">myType</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#reactionMode">reactionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CollisionObject.html#useRaycasting">useRaycasting</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FisixObject()">FisixObject</a>(p:<a href="FisixObject.html">FisixObject</a> = null)</div>
+<div class="summaryTableDescription">Creates a FisixObject
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#aabbIntersection()">aabbIntersection</a>(obj:<a href="../core/CollisionObject.html">CollisionObject</a>):Boolean</div>
+<div class="summaryTableDescription">Returns whether or not this object's AABB is intersecting with the given object's AABB
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addConstraint()">addConstraint</a>(c:<a href="../primitives/Constraint.html">Constraint</a>):<a href="../primitives/Constraint.html">Constraint</a>
+</div>
+<div class="summaryTableDescription">Adds a constraint to the engine from an object previously instanciated.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addContainer()">addContainer</a>(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>):<a href="../primitives/FisixContainer.html">FisixContainer</a>
+</div>
+<div class="summaryTableDescription">Adds a container to the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addDisplayAttacher()">addDisplayAttacher</a>(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>
+</div>
+<div class="summaryTableDescription">Use to add a DisplayAttacher object to the simulation
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addMagnet()">addMagnet</a>(m:<a href="../primitives/Magnet.html">Magnet</a>):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Adds a Magnet Object to the simulation.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addObject()">addObject</a>(obj:<a href="CollisionObject.html">CollisionObject</a>):<a href="../core/CollisionObject.html">CollisionObject</a>
+</div>
+<div class="summaryTableDescription">Used to add an object instantiated by the user to the object.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#addThrust()">addThrust</a>(t:<a href="Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Adds a thrust to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#applyForce()">applyForce</a>(f:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">Applies a force to all of the dynamic objects within the FisixObject
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#applyForcePoint()">applyForcePoint</a>(f:<a href="../core/Vector.html">Vector</a>, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Applies a force at the given point.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#constraintAllParticles()">constraintAllParticles</a>(stiffness:Number = 1, breakPoint:Number = 0):void</div>
+<div class="summaryTableDescription">Constraints all of the particles of the object to eachother.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#explode()">explode</a>(pos:<a href="Vector.html">Vector</a>, force:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">Create an explosion in the given position which will affect all the objects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fireAfterChildCollision()">fireAfterChildCollision</a>(child:<a href="CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#fireAfterCollision()">fireAfterCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#fireOnChildCollision()">fireOnChildCollision</a>(child:<a href="CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#fireOnCollision()">fireOnCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#fix()">fix</a>(f:Boolean = true):void</div>
+<div class="summaryTableDescription">Another way of setting the value 'fixed'.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#flipJoints()">flipJoints</a>():void</div>
+<div class="summaryTableDescription">Flips all the angular constraints in the FisixObject
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getBounds()">getBounds</a>():<a href="../utils/BoundingBox.html">BoundingBox</a>
+</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getCenter()">getCenter</a>():<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Returns the center point of all the objects in the FisixObject
+   Editing this vector will have no affects on the object.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#getDetectionMode()">getDetectionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getIterations()">getIterations</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#getMaterial()">getMaterial</a>():String</div>
+<div class="summaryTableDescription">The name of the current material applied to the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#getNormalAngleAt()">getNormalAngleAt</a>(p:<a href="../core/Vector.html">Vector</a>):Number</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#getNormalAt()">getNormalAt</a>(p:<a href="../core/Vector.html">Vector</a>, dirVector:<a href="../core/Vector.html">Vector</a> = null):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#getReactionMode()">getReactionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#integrate()">integrate</a>(dt:Number = 1):void</div>
+<div class="summaryTableDescription">Integrates all children forward in time.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#isStatic()">isStatic</a>():Boolean</div>
+<div class="summaryTableDescription">Returns a value indicating whether or not this object was made static.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#makeStatic()">makeStatic</a>():void</div>
+<div class="summaryTableDescription">Tells the engine to treat all objects within this FisixObject as static.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#move()">move</a>(tX:Number, tY:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">simply translates all children of the object by the given x and y offsets
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newAngularConstraint()">newAngularConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, pC:<a href="../primitives/Particle.html">Particle</a>, min:Number = -1, max:Number = -1):<a href="../constraints/AngularConstraint.html">AngularConstraint</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newCircleContainer()">newCircleContainer</a>(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/CircleContainer.html">CircleContainer</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a CircleConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newCircleParticle()">newCircleParticle</a>(x:Number, y:Number, r:Number):<a href="../particles/CircleParticle.html">CircleParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a CircleParticle in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newConstraintAttacher()">newConstraintAttacher</a>(mc:DisplayObject, springConstraint:<a href="../constraints/SpringConstraint.html">SpringConstraint</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/ConstraintAttacher.html">ConstraintAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a ConstraintAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newDisplayAttacher()">newDisplayAttacher</a>(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newDisplayAttacher2()">newDisplayAttacher2</a>(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, v2:<a href="Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher2 to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newDisplayAttacher3()">newDisplayAttacher3</a>(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, v2:<a href="Vector.html">Vector</a>, v3:<a href="Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher3.html">DisplayAttacher3</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher3 to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newDynamicSurface()">newDynamicSurface</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, r:Number = 0):<a href="../surfaces/DynamicSurface.html">DynamicSurface</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DynamicSurface in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newFisixObject()">newFisixObject</a>():<a href="../core/FisixObject.html">FisixObject</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a FisixObject in one line
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newGuideParticle()">newGuideParticle</a>(x:Number, y:Number):<a href="../particles/GuideParticle.html">GuideParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a GuideParticle in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newMagnet()">newMagnet</a>(force:Number, x:Number, y:Number):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a Magnet in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newParticleAttacher()">newParticleAttacher</a>(mc:DisplayObject, particle:<a href="../primitives/Particle.html">Particle</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/ParticleAttacher.html">ParticleAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a ParticleAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newSpringConstraint()">newSpringConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, stiffness:Number = 0.5, restlength:Number = -1):<a href="../constraints/SpringConstraint.html">SpringConstraint</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a SpringConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newStickConstraint()">newStickConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, restlength:Number = -1):<a href="../constraints/StickConstraint.html">StickConstraint</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a StickConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newSurface()">newSurface</a>(vA:<a href="Vector.html">Vector</a>, vB:<a href="Vector.html">Vector</a>, r:Number = 0):<a href="../primitives/Surface.html">Surface</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a static Surface in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newSurfaceAttacher()">newSurfaceAttacher</a>(mc:DisplayObject, surface:<a href="../primitives/Surface.html">Surface</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/SurfaceAttacher.html">SurfaceAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a SurfaceAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newThrust()">newThrust</a>(x:Number, y:Number):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a Thrust in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newWheelAttacher()">newWheelAttacher</a>(mc:DisplayObject, wheel:<a href="../particles/WheelParticle.html">WheelParticle</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/WheelAttacher.html">WheelAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a WheelAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newWheelContainer()">newWheelContainer</a>(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/WheelContainer.html">WheelContainer</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#newWheelParticle()">newWheelParticle</a>(x:Number, y:Number, r:Number):<a href="../particles/WheelParticle.html">WheelParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a WheelParticle in one line.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#onInit()">onInit</a>():void</div>
+<div class="summaryTableDescription">Called after the object is initiated by a FisixObject to which it was added
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pickParticle()">pickParticle</a>(x:Number, y:Number, radius:Number = 0):<a href="../particles/CircleParticle.html">CircleParticle</a>
+</div>
+<div class="summaryTableDescription">Finds a particle located at the given position
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#pointForce()">pointForce</a>(point:<a href="Vector.html">Vector</a>, force:<a href="">Number</a>):void</div>
+<div class="summaryTableDescription">
+   Applies a force value on the object from the given point.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeConstraint()">removeConstraint</a>(c:<a href="../primitives/Constraint.html">Constraint</a>, disposeObject:Boolean = false):<a href="../primitives/Constraint.html">Constraint</a>
+</div>
+<div class="summaryTableDescription">Removes a constraint previously added to the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeContainer()">removeContainer</a>(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>, disposeObject:Boolean = false):<a href="../primitives/FisixContainer.html">FisixContainer</a>
+</div>
+<div class="summaryTableDescription">Removes a Container previously added.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeDisplayAttacher()">removeDisplayAttacher</a>(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>
+</div>
+<div class="summaryTableDescription">Use to remove a DisplayAttacher object that was added to the simulation
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeMagnet()">removeMagnet</a>(m:<a href="../primitives/Magnet.html">Magnet</a>, disposeObject:Boolean = false):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Removes a Magnet that was previously added.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeObject()">removeObject</a>(obj:<a href="CollisionObject.html">CollisionObject</a>, disposeObject:Boolean = false):<a href="../core/CollisionObject.html">CollisionObject</a>
+</div>
+<div class="summaryTableDescription">Removes any object added using addObject().</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#removeThrust()">removeThrust</a>(t:<a href="Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Removes a thrust added with addThrust().</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#render()">render</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">renders all children to the given Graphics object.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#renderBoundingBox()">renderBoundingBox</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders a rectangle representing the bounding box to the graphics object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderConstraints()">renderConstraints</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the constraints within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderFisixObjects()">renderFisixObjects</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the FisixObjects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderGuides()">renderGuides</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the guide particles within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderMagnets()">renderMagnets</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the magnets within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderParticles()">renderParticles</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the particles within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderPolygons()">renderPolygons</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the polygons within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#renderSurfaces()">renderSurfaces</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the surfaces within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rotateAll()">rotateAll</a>(ang:Number, center:<a href="Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription">Rotates all children of the object by the given angle.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rotationalForce()">rotationalForce</a>(deg:Number, center:<a href="Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rotationalThrust()">rotationalThrust</a>(deg:Number, center:<a href="Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#scale()">scale</a>(scaleX:Number, scaleY:Number, flipAngularConstraints:Boolean = false, pivot:<a href="Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription">Scales all the objects withing the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setAllDetectionModes()">setAllDetectionModes</a>(m:int, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">overrides the collision detection mode of all objects within the FisixObject and sets them to the given value.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setAllReactionModes()">setAllReactionModes</a>(m:int, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">overrides the collision reaction mode of all objects within the FisixObject and sets them to the given value
+   This does not affect the settings of objects added after this call
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setBounce()">setBounce</a>(b:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setBounds()">setBounds</a>(b:<a href="../utils/BoundingBox.html">BoundingBox</a>):void</div>
+<div class="summaryTableDescription">
+   Sets the bounding rectangle of all the objects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setCenter()">setCenter</a>(cX:Number, cY:Number, thrustObject:Boolean = false):void</div>
+<div class="summaryTableDescription">Moves all children of the object so that their center corresponds with the given values.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#setDetectionMode()">setDetectionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision detection mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setDrag()">setDrag</a>(d:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setFixed()">setFixed</a>(f:Boolean, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setFriction()">setFriction</a>(f:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setIterations()">setIterations</a>(iter:int):void</div>
+<div class="summaryTableDescription">Sets the amount of times per frame that the collisions and constraints within this object's children should be solved.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMagnetic()">setMagnetic</a>(m:Boolean, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#setMaterial()">setMaterial</a>(mName:String):void</div>
+<div class="summaryTableDescription">Sets the material of the object
+   This modifies the object's 'friction', 'bounce', 'color' and 'traction' properties.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#setReactionMode()">setReactionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision reaction mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setTraction()">setTraction</a>(t:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setVelocity()">setVelocity</a>(vel:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#thrust()">thrust</a>(tX:Number, tY:Number, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">Thrusts all collision objects in the object with the given force
+   </div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#thrustPoint()">thrustPoint</a>(tX:Number, tY:Number, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Unlike thrust which moves the whole object, thrustPoint() hits the object from the given point, with the given x,y values and adds the values to its velocity.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#unload()">unload</a>():void</div>
+<div class="summaryTableDescription">Removes the object from the engine and disposes of it.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#updateBoundingBox()">updateBoundingBox</a>():void</div>
+<div class="summaryTableDescription">Updates the bounding box of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#updateDisplays()">updateDisplays</a>():void</div>
+<div class="summaryTableDescription">updates all the DisplayAttachers in the engine.</div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#afterChildCollision()">afterChildCollision</a>(child:<a href="CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#afterCollision()">afterCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action after a collision is resolved
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#afterUnload()">afterUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions after the object has been unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#initChild()">initChild</a>(c:<a href="CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onChildCollision()">onChildCollision</a>(child:<a href="CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#onCollision()">onCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action at the time a collision is detected
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CollisionObject.html#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions once the object is unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#staticUpdate()">staticUpdate</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">FisixObject</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="axisAligned"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">axisAligned</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var axisAligned:Boolean = false</code><p>When set to true, the FisixObject will be Rigid and Axis-Aligned.<br>
+   When the FisixObject is 'axisAligned', all the Particles within will always maintain the same distance to eachother.<br>
+   Additionally, the entire object will not rotate. To rotate manually, use rotateAll(). Using rotationalThrust() or rotationalForce will not work correctly when axisAligned is true.
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#rotateAll()" target="">rotateAll()</a>
+</div>
+</div>
+<a name="bounds"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">bounds</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var bounds:<a href="../utils/BoundingBox.html">BoundingBox</a></code>
+</div>
+<a name="boundsCollisions"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">boundsCollisions</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var boundsCollisions:Boolean = false</code><p>When true, all children of the FisixObject will be confined to the boundaries set by setBounds()
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setBounds()" target="">setBounds()</a>
+</div>
+</div>
+<a name="constraints"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraints</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var constraints:Array</code><p>an array containing all of the Constraints in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="constraints"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraints</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var constraints:Array</code>
+</div>
+<a name="containers"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">containers</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var containers:Array</code><p>an array containing all of the Containers in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="containers"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">containers</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var containers:Array</code>
+</div>
+<a name="displayAttachers"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">displayAttachers</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var displayAttachers:Array</code>
+</div>
+<a name="drag"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">drag</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var drag:Number = 0</code><p>A value between 0 - 1 representing the amount of drag to apply on all children of the object.
+   <br><br>0 - no drag
+   <br>1 - full drag (no movement at all)
+   </p></div>
+<a name="fisixObjects"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fisixObjects</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var fisixObjects:Array</code><p>an array containing all of the FisixObjects in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="fisixObjects"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fisixObjects</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var fisixObjects:Array</code>
+</div>
+<a name="guides"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">guides</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var guides:Array</code><p>an array containing all of the GuideParticles in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="guides"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">guides</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var guides:Array</code>
+</div>
+<a name="innerCollisions"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">innerCollisions</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var innerCollisions:Boolean = true</code><p>When true, objects within the FisixObject will collide with among themselves.
+   It is usefull to turn this off for performance reasons when no collision checks are necessary (like in a cloth like object)
+   or when a FisixObject contains objects that shouldn't collide with eachother
+   </p></div>
+<a name="iterations"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">iterations</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected var iterations:int = 3</code>
+</div>
+<a name="magnets"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">magnets</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var magnets:Array</code><p>an array containing all of the Magnets in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="magnets"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">magnets</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var magnets:Array</code>
+</div>
+<a name="particles"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">particles</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var particles:Array</code><p>an array containing all of the Particles in the FisixObject.
+   refrain from accessing the elements in this array, instead use a reference
+   obtained from newCircleParticle(), or newWheel()
+   
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#newCircleParticle()" target="">newCircleParticle()</a>
+<br>
+<a href="../core/FisixObject.html#newWheel()" target="">newWheel()</a>
+<br>
+<a href="../core/FisixObject.html#addObject()" target="">addObject()</a>
+</div>
+</div>
+<a name="particles"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">particles</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var particles:Array</code>
+</div>
+<a name="polygons"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">polygons</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var polygons:Array</code><p>an array containing all of the Polygons in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="renderBoundingBoxes"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderBoundingBoxes</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var renderBoundingBoxes:Boolean = false</code><p>When true, calling render() will also render the bounding boxes of all children objects
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="surfaces"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">surfaces</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var surfaces:Array</code><p>an array containing all of the Surfaces in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="surfaces"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">surfaces</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var surfaces:Array</code>
+</div>
+<a name="thrusts"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrusts</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var thrusts:Array</code><p>an array containing all of the Thrusts in the FisixObject.
+   <b>To avoid errors, refrain from accessing the elements in this array directly.</b>
+   </p></div>
+<a name="thrusts"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrusts</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var thrusts:Array</code>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FisixObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FisixObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FisixObject(p:<a href="FisixObject.html">FisixObject</a> = null)</code><p>Creates a FisixObject
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="FisixObject.html">FisixObject</a></code> (default = <code>null</code>)<code></code> &mdash; Parent of the FisixObject. No need to supply a value, addObject() automatically takes care of that whenever an object is added
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#addObject()" target="">addObject()</a>
+</div>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="addConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addConstraint(c:<a href="../primitives/Constraint.html">Constraint</a>):<a href="../primitives/Constraint.html">Constraint</a></code><p>Adds a constraint to the engine from an object previously instanciated.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../primitives/Constraint.html">Constraint</a></code> &mdash; Any objects which extends the Constraint class.<br>
+   This includes SpringConstraints, StickConstraints, and AngularConstraints
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Constraint.html">Constraint</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="addContainer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addContainer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addContainer(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>):<a href="../primitives/FisixContainer.html">FisixContainer</a></code><p>Adds a container to the FisixObject.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../primitives/FisixContainer.html">FisixContainer</a></code> &mdash; Any object extending the FisixContainer Object<br>
+   This includes CircleContainers and WheelContainers
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/FisixContainer.html">FisixContainer</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../containers/package-detail.html" target="">com.fileitup.fisixengine.containers</a>
+<br>
+<a href="../primitives/FisixContainer.html" target="">com.fileitup.fisixengine.primitives.FisixContainer</a>
+</div>
+</div>
+<a name="addDisplayAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addDisplayAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addDisplayAttacher(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code><p>Use to add a DisplayAttacher object to the simulation
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code> &mdash; An instance of the DisplayAttacher class, or any of its descendents.
+   return The added object is successful. null if there was an error
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code></td>
+</tr>
+</table>
+</div>
+<a name="addMagnet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addMagnet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addMagnet(m:<a href="../primitives/Magnet.html">Magnet</a>):<a href="../primitives/Magnet.html">Magnet</a></code><p>Adds a Magnet Object to the simulation.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:<a href="../primitives/Magnet.html">Magnet</a></code> &mdash; An instance of the Magnet Class.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Magnet.html">Magnet</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Magnet.html" target="">com.fileitup.fisixengine.primitives.Magnet</a>
+</div>
+</div>
+<a name="addObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addObject(obj:<a href="CollisionObject.html">CollisionObject</a>):<a href="../core/CollisionObject.html">CollisionObject</a></code><p>Used to add an object instantiated by the user to the object.
+   The object must be either a Particle (any type), Surface (any Type) or Polygon(not implemented in alpha)
+   
+   Instead of adding objects you created manually, you can create and add objects in one line with the
+   new[ObjectType] methods
+   
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">obj</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/CollisionObject.html">CollisionObject</a></code> &mdash; 
+                        Returns the same object passed in if the object was added successfully. Otherwise, returns null
+   
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#newParticle()" target="">newParticle()</a>
+<br>
+<a href="../core/FisixObject.html#newCircleParticle()" target="">newCircleParticle()</a>
+<br>
+<a href="../core/FisixObject.html#newGuide()" target="">newGuide()</a>
+<br>
+<a href="../core/FisixObject.html#newWheel()" target="">newWheel()</a>
+<br>
+<a href="../core/FisixObject.html#newSurface()" target="">newSurface()</a>
+</div>
+</div>
+<a name="addThrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">addThrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function addThrust(t:<a href="Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a></code><p>Adds a thrust to the engine.
+   Thrusts are vector quantities of force that are added to all the children of the FisixObject at every timestep.
+   Thrusts can be used for wind, gravity, etc.<br>
+   For example, The FisixEngine class uses this with setGravity() to simplify adding a global gravity force.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:<a href="Vector.html">Vector</a></code> &mdash; A vector which holds the x and y components of the force to be added
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/Vector.html">Vector</a></code> &mdash; 
+                        If adding was successfull, the thrust added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="Vector.html" target="">Vector</a>
+</div>
+</div>
+<a name="afterChildCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">afterChildCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function afterChildCollision(child:<a href="CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">child</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../collisions/CollisionData.html">CollisionData</a></code></td>
+</tr>
+</table>
+</div>
+<a name="applyForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applyForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function applyForce(f:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</code><p>Applies a force to all of the dynamic objects within the FisixObject
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkAA</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">Particle.applyForce()</div>
+</div>
+<a name="constraintAllParticles()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">constraintAllParticles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function constraintAllParticles(stiffness:Number = 1, breakPoint:Number = 0):void</code><p>Constraints all of the particles of the object to eachother.
+   </p><p>
+   This does not include guide particles.
+   For more automatic constraining options, see the static methods for StickConstraint and SpringConstraint.
+   </p>
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">stiffness</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; If left at one, StickConstraints will be created, otherwise SpringConstraints will.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">breakPoint</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; the breakPoint of the created constraints. Leave at 0 to make unbreakable
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/StickConstraint.html#constraintAll()" target="">com.fileitup.fisixengine.constraints.StickConstraint.constraintAll()</a>
+<br>com.fileitup.fisixengine.primitives.constraint.breakPoint<br>
+<a href="../core/FisixObject.html#addConstraint()" target="">addConstraint()</a>
+</div>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function dispose():void</code><p></p></div>
+<a name="explode()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">explode</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function explode(pos:<a href="Vector.html">Vector</a>, force:Number, recursive:Boolean = true):void</code><p>Create an explosion in the given position which will affect all the objects within the FisixObject.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pos</span>:<a href="Vector.html">Vector</a></code> &mdash; The global position at which to create the explosion
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:Number</code> &mdash; The force of the explosion (ie. 200)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If set to false, the FisixObject withing the calling FisixObject will not be affected.
+   </td>
+</tr>
+</table>
+</div>
+<a name="fireAfterChildCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fireAfterChildCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fireAfterChildCollision(child:<a href="CollisionObject.html">CollisionObject</a>):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">child</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+</table>
+</div>
+<a name="fireOnChildCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">fireOnChildCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function fireOnChildCollision(child:<a href="CollisionObject.html">CollisionObject</a>):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">child</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+</table>
+</div>
+<a name="flipJoints()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">flipJoints</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function flipJoints():void</code><p>Flips all the angular constraints in the FisixObject
+   </p><p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/AngularConstraint.html#flip()" target="">com.fileitup.fisixengine.constraints.AngularConstraint.flip()</a>
+</div>
+</div>
+<a name="getBounds()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getBounds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getBounds():<a href="../utils/BoundingBox.html">BoundingBox</a></code><p>
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../utils/BoundingBox.html">BoundingBox</a></code> &mdash; 
+                        the BoundingBox object of this FisixObject
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="getCenter()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getCenter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getCenter():<a href="../core/Vector.html">Vector</a></code><p>Returns the center point of all the objects in the FisixObject
+   Editing this vector will have no affects on the object.
+   Instead use setCenter
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/Vector.html">Vector</a></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setCenter()" target="">setCenter()</a>
+</div>
+</div>
+<a name="getIterations()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getIterations</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getIterations():int</code><p>
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>int</code> &mdash; the iterations value for this object.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setIterations()" target="">setIterations()</a>
+</div>
+</div>
+<a name="initChild()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">initChild</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function initChild(c:<a href="CollisionObject.html">CollisionObject</a>):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+</table>
+</div>
+<a name="integrate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">integrate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function integrate(dt:Number = 1):void</code><p>Integrates all children forward in time.
+   This is an internal method, and should not be called directly.
+   The FisixEngine's startEngine() takes care of everything. You can also use FisixEngine.mainLoop() for more control.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dt</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; the amount of seconds to integrate by
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FisixEngine.html#startEngine()" target="">FisixEngine.startEngine()</a>
+<br>
+<a href="FisixEngine.html#mainLoop()" target="">FisixEngine.mainLoop()</a>
+</div>
+</div>
+<a name="makeStatic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">makeStatic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function makeStatic():void</code><p>Tells the engine to treat all objects within this FisixObject as static.
+   </p><p>This allows for faster processing of collision detection
+   by setting the engine to static, the engine knows to avoid redundant
+   calculations needed for moving objects.
+   It also fixes all children of the FisixObject in place
+   
+   <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">Particle..fixed</div>
+</div>
+<a name="move()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">move</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function move(tX:Number, tY:Number, recursive:Boolean = true):void</code><p>simply translates all children of the object by the given x and y offsets
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tX</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tY</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="newAngularConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newAngularConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newAngularConstraint(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, pC:<a href="../primitives/Particle.html">Particle</a>, min:Number = -1, max:Number = -1):<a href="../constraints/AngularConstraint.html">AngularConstraint</a></code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pA</span>:<a href="../primitives/Particle.html">Particle</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pB</span>:<a href="../primitives/Particle.html">Particle</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pC</span>:<a href="../primitives/Particle.html">Particle</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">min</span>:Number</code> (default = <code>-1</code>)<code></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">max</span>:Number</code> (default = <code>-1</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../constraints/AngularConstraint.html">AngularConstraint</a></code></td>
+</tr>
+</table>
+</div>
+<a name="newCircleContainer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newCircleContainer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newCircleContainer(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/CircleContainer.html">CircleContainer</a></code><p>Creates and adds a CircleConstraint in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; global x position of the center of the container
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; global y position of the center of the container
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rad</span>:Number</code> &mdash; the radius of the container's CircleParticle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">innerDynamics</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../containers/CircleContainer.html">CircleContainer</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../containers/CircleContainer.html" target="">com.fileitup.fisixengine.containers.CircleContainer</a>
+</div>
+</div>
+<a name="newCircleParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newCircleParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newCircleParticle(x:Number, y:Number, r:Number):<a href="../particles/CircleParticle.html">CircleParticle</a></code><p>Creates and adds a CircleParticle in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../particles/CircleParticle.html">CircleParticle</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../particles/CircleParticle.html" target="">com.fileitup.fisixengine.particles.CircleParticle</a>
+</div>
+</div>
+<a name="newConstraintAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newConstraintAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newConstraintAttacher(mc:DisplayObject, springConstraint:<a href="../constraints/SpringConstraint.html">SpringConstraint</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/ConstraintAttacher.html">ConstraintAttacher</a></code><p>Creates and adds a ConstraintAttacher to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">springConstraint</span>:<a href="../constraints/SpringConstraint.html">SpringConstraint</a></code> &mdash; A Constraint object to attach to. This may also be a StickConstraint.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angOff</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of degrees to offset the angle of the DisplayObject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mult</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; A value to multiply the angle by beffor adding the offset.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/ConstraintAttacher.html">ConstraintAttacher</a></code> &mdash; 
+                        The created ConstraintAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.ConstraintAttacher</div>
+</div>
+<a name="newDisplayAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newDisplayAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newDisplayAttacher(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a></code><p>Creates and adds a DisplayAttacher to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v1</span>:<a href="Vector.html">Vector</a></code> &mdash; The Vector object to attach the DisplayObject to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">xOffset</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of pixels to offset the DisplayObject on the x axis
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">yOffset</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of pixels to offset the DisplayObject on the y axis
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a></code> &mdash; 
+                        The created DisplayAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.DisplayAttacher</div>
+</div>
+<a name="newDisplayAttacher2()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newDisplayAttacher2</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newDisplayAttacher2(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, v2:<a href="Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a></code><p>Creates and adds a DisplayAttacher2 to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v1</span>:<a href="Vector.html">Vector</a></code> &mdash; The Vector object to attach the DisplayObject to (anchor).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v2</span>:<a href="Vector.html">Vector</a></code> &mdash; The Vector object to use for angle calculations (target).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angOff</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of degrees to offset the angle of the DisplayObject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mult</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; A value to multiply the angle by beffor adding the offset.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a></code> &mdash; 
+                        The created DisplayAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.DisplayAttacher2</div>
+</div>
+<a name="newDisplayAttacher3()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newDisplayAttacher3</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newDisplayAttacher3(mc:DisplayObject, v1:<a href="Vector.html">Vector</a>, v2:<a href="Vector.html">Vector</a>, v3:<a href="Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher3.html">DisplayAttacher3</a></code><p>Creates and adds a DisplayAttacher3 to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v1</span>:<a href="Vector.html">Vector</a></code> &mdash; The Vector object to attach the DisplayObject to (anchor).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v2</span>:<a href="Vector.html">Vector</a></code> &mdash; The first Vector object to use for angle calculations.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">v3</span>:<a href="Vector.html">Vector</a></code> &mdash; The second Vector object to use for angle calculations.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angOff</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of degrees to offset the angle of the DisplayObject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mult</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; A value to multiply the angle by beffor adding the offset.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/DisplayAttacher3.html">DisplayAttacher3</a></code> &mdash; 
+                        The created DisplayAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.DisplayAttacher3</div>
+</div>
+<a name="newDynamicSurface()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newDynamicSurface</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newDynamicSurface(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, r:Number = 0):<a href="../surfaces/DynamicSurface.html">DynamicSurface</a></code><p>Creates and adds a DynamicSurface in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pA</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A vector Object to confine the first point of the surface to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pB</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A vector Object to confine the second point of the surface to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of the surface
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../surfaces/DynamicSurface.html">DynamicSurface</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">com.fileitup.fisixengine.surface.DynamicSurface</div>
+</div>
+<a name="newFisixObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newFisixObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newFisixObject():<a href="../core/FisixObject.html">FisixObject</a></code><p>Creates and adds a FisixObject in one line
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/FisixObject.html">FisixObject</a></code> &mdash; 
+                        a new FisixObject which has been added to calling FisixObject
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="newGuideParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newGuideParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newGuideParticle(x:Number, y:Number):<a href="../particles/GuideParticle.html">GuideParticle</a></code><p>Creates and adds a GuideParticle in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; The x position of the particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; The y position of the particle
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../particles/GuideParticle.html">GuideParticle</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../particles/GuideParticle.html" target="">com.fileitup.fisixengine.particles.GuideParticle</a>
+</div>
+</div>
+<a name="newMagnet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newMagnet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newMagnet(force:Number, x:Number, y:Number):<a href="../primitives/Magnet.html">Magnet</a></code><p>Creates and adds a Magnet in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:Number</code> &mdash; A vector representing the magnet's global position. If you'd like to attach an object to the magnet, specify the object's 'pos' property here.
+   To attach the magnet to an object later, use the attachToObject() or attachToVector() methods.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; A number representing the force of the magnet. A positive value makes the magnet attract objects and a negative value repells other objects.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Magnet.html">Magnet</a></code> &mdash; 
+                        The vector associated with the thrust.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">com.fileitup.fisixengine.core.Magnet</div>
+</div>
+<a name="newParticleAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newParticleAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newParticleAttacher(mc:DisplayObject, particle:<a href="../primitives/Particle.html">Particle</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/ParticleAttacher.html">ParticleAttacher</a></code><p>Creates and adds a ParticleAttacher to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">particle</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; The Particle object to attach the DisplayObject to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">xOffset</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of pixels to offset the DisplayObject on the x axis
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">yOffset</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of pixels to offset the DisplayObject on the y axis
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/ParticleAttacher.html">ParticleAttacher</a></code> &mdash; 
+                        The created ParticleAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.ParticleAttacher</div>
+</div>
+<a name="newSpringConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newSpringConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newSpringConstraint(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, stiffness:Number = 0.5, restlength:Number = -1):<a href="../constraints/SpringConstraint.html">SpringConstraint</a></code><p>Creates and adds a SpringConstraint in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pA</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A Particle to serve as the first endpoint of the constraint. this includes particles and polygons.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pB</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A Particle to serve as the second endpoint of the constraint. this includes particles and polygons.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">stiffness</span>:Number</code> (default = <code>0.5</code>)<code></code> &mdash; A number between 0 and 1 where 0 represents a spring that can stretch out forever and 1 is completely stiff.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">restlength</span>:Number</code> (default = <code>-1</code>)<code></code> &mdash; The desired length of the stick constraint. leave at default value (-1) to use the current distance
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../constraints/SpringConstraint.html">SpringConstraint</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/SpringConstraint.html" target="">com.fileitup.fisixengine.constraints.SpringConstraint</a>
+</div>
+</div>
+<a name="newStickConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newStickConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newStickConstraint(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, restlength:Number = -1):<a href="../constraints/StickConstraint.html">StickConstraint</a></code><p>Creates and adds a StickConstraint in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">pA</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A Particle to serve as the first endpoint of the constraint. this includes particles and polygons.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pB</span>:<a href="../primitives/Particle.html">Particle</a></code> &mdash; A Particle to serve as the second endpoint of the constraint. this includes particles and polygons.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">restlength</span>:Number</code> (default = <code>-1</code>)<code></code> &mdash; The desired length of the stick constraint. leave at default value (-1) to use the current distance
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../constraints/StickConstraint.html">StickConstraint</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/StickConstraint.html" target="">com.fileitup.fisixengine.constraints.StickConstraint</a>
+</div>
+</div>
+<a name="newSurface()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newSurface</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newSurface(vA:<a href="Vector.html">Vector</a>, vB:<a href="Vector.html">Vector</a>, r:Number = 0):<a href="../primitives/Surface.html">Surface</a></code><p>Creates and adds a static Surface in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">vA</span>:<a href="Vector.html">Vector</a></code> &mdash; A vector Object to confine the first point of the surface to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">vB</span>:<a href="Vector.html">Vector</a></code> &mdash; A vector Object to confine the second point of the surface to.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of the surface
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Surface.html">Surface</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Surface.html" target="">com.fileitup.fisixengine.primitives.Surface</a>
+</div>
+</div>
+<a name="newSurfaceAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newSurfaceAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newSurfaceAttacher(mc:DisplayObject, surface:<a href="../primitives/Surface.html">Surface</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/SurfaceAttacher.html">SurfaceAttacher</a></code><p>Creates and adds a SurfaceAttacher to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">surface</span>:<a href="../primitives/Surface.html">Surface</a></code> &mdash; A Surface object to attach to. This may also be a StickConstraint.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angOff</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of degrees to offset the angle of the DisplayObject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mult</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; A value to multiply the angle by beffor adding the offset.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/SurfaceAttacher.html">SurfaceAttacher</a></code> &mdash; 
+                        The created SurfaceAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.SurfaceAttacher</div>
+</div>
+<a name="newThrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newThrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newThrust(x:Number, y:Number):<a href="../core/Vector.html">Vector</a></code><p>Creates and adds a Thrust in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; x force of the thrust
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; y force of the thrust
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/Vector.html">Vector</a></code> &mdash; 
+                        The vector associated with the thrust
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#addThrust()" target="">addThrust()</a>
+</div>
+</div>
+<a name="newWheelAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newWheelAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newWheelAttacher(mc:DisplayObject, wheel:<a href="../particles/WheelParticle.html">WheelParticle</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/WheelAttacher.html">WheelAttacher</a></code><p>Creates and adds a WheelAttacher to the engine.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">mc</span>:DisplayObject</code> &mdash; A flash DisplayObject (ie. a MovieClip, Sprite, Shape).
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">wheel</span>:<a href="../particles/WheelParticle.html">WheelParticle</a></code> &mdash; A WheelParticle object to attach to. This may also be a StickConstraint.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">angOff</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The amount of degrees to offset the angle of the DisplayObject.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">mult</span>:Number</code> (default = <code>1</code>)<code></code> &mdash; A value to multiply the angle by beffor adding the offset.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/WheelAttacher.html">WheelAttacher</a></code> &mdash; 
+                        The created WheelAttacher. null if creation was unsuccessful
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">fileiup.fisixengine.graphics.WheelAttacher</div>
+</div>
+<a name="newWheelContainer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newWheelContainer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newWheelContainer(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/WheelContainer.html">WheelContainer</a></code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rad</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">innerDynamics</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../containers/WheelContainer.html">WheelContainer</a></code></td>
+</tr>
+</table>
+</div>
+<a name="newWheelParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">newWheelParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function newWheelParticle(x:Number, y:Number, r:Number):<a href="../particles/WheelParticle.html">WheelParticle</a></code><p>Creates and adds a WheelParticle in one line.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; The x position of the particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; The y position of the particle
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code> &mdash; The radius of the particle
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../particles/WheelParticle.html">WheelParticle</a></code> &mdash; 
+                        If adding was successfull, the object added is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../particles/WheelParticle.html" target="">com.fileitup.fisixengine.particles.WheelParticle</a>
+</div>
+</div>
+<a name="onChildCollision()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onChildCollision</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onChildCollision(child:<a href="CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">child</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">data</span>:<a href="../collisions/CollisionData.html">CollisionData</a></code></td>
+</tr>
+</table>
+</div>
+<a name="pickParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pickParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function pickParticle(x:Number, y:Number, radius:Number = 0):<a href="../particles/CircleParticle.html">CircleParticle</a></code><p>Finds a particle located at the given position
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; The radius to search for a hit at. This is usefull for picking small objects.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">radius</span>:Number</code> (default = <code>0</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../particles/CircleParticle.html">CircleParticle</a></code> &mdash; 
+                        If a particle is touched, a reference to it is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="pointForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">pointForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function pointForce(point:<a href="Vector.html">Vector</a>, force:<a href="">Number</a>):void</code><p>
+   Applies a force value on the object from the given point.
+   The farther the object is from the point, the less it is affected.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">point</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:<a href="">Number</a></code></td>
+</tr>
+</table>
+</div>
+<a name="removeConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeConstraint(c:<a href="../primitives/Constraint.html">Constraint</a>, disposeObject:Boolean = false):<a href="../primitives/Constraint.html">Constraint</a></code><p>Removes a constraint previously added to the FisixObject.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../primitives/Constraint.html">Constraint</a></code> &mdash; Any object that extends the Constraint class.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">disposeObject</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Constraint.html">Constraint</a></code> &mdash; 
+                        If removing was successfull, the object removed is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#addConstraint()" target="">addConstraint()</a>
+</div>
+</div>
+<a name="removeContainer()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeContainer</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeContainer(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>, disposeObject:Boolean = false):<a href="../primitives/FisixContainer.html">FisixContainer</a></code><p>Removes a Container previously added.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">c</span>:<a href="../primitives/FisixContainer.html">FisixContainer</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">disposeObject</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/FisixContainer.html">FisixContainer</a></code> &mdash; 
+                        If removing was successfull, the object removed is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="removeDisplayAttacher()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeDisplayAttacher</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeDisplayAttacher(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code><p>Use to remove a DisplayAttacher object that was added to the simulation
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../graphics/DisplayAttacher.html">DisplayAttacher</a></code></td>
+</tr>
+</table>
+</div>
+<a name="removeMagnet()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeMagnet</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeMagnet(m:<a href="../primitives/Magnet.html">Magnet</a>, disposeObject:Boolean = false):<a href="../primitives/Magnet.html">Magnet</a></code><p>Removes a Magnet that was previously added.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:<a href="../primitives/Magnet.html">Magnet</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">disposeObject</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../primitives/Magnet.html">Magnet</a></code> &mdash; 
+                        If removing was successfull, the object removed is returned. Otherwise, null is returned.
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="removeObject()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeObject</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeObject(obj:<a href="CollisionObject.html">CollisionObject</a>, disposeObject:Boolean = false):<a href="../core/CollisionObject.html">CollisionObject</a></code><p>Removes any object added using addObject().
+   Note that removing an object also removes all surfaces and constraints that were attached to it
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">obj</span>:<a href="CollisionObject.html">CollisionObject</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">disposeObject</span>:Boolean</code> (default = <code>false</code>)<code></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/CollisionObject.html">CollisionObject</a></code> &mdash; 
+                        If remove was successfull, returns the object that was removed. Otherwise returns null
+   
+                        
+                     </td>
+</tr>
+</table>
+</div>
+<a name="removeThrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">removeThrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function removeThrust(t:<a href="Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a></code><p>Removes a thrust added with addThrust().
+   param t A vector that was added to the Object through addThrust() or a vector returned from newThrust()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../core/Vector.html">Vector</a></code> &mdash; 
+                        If removing was successfull, the thrust removed is returned. Otherwise, null is returned
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#addThrust()" target="">addThrust()</a>
+<br>
+<a href="../core/FisixObject.html#newThrust()" target="">newThrust()</a>
+</div>
+</div>
+<a name="render()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function render(g:Graphics):void</code><p>renders all children to the given Graphics object.
+   This method only needs to be used if you are creating a manual simulation loop
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="FisixEngine.html#setRenderGraphics()" target="">FisixEngine.setRenderGraphics()</a>
+</div>
+<br>
+<span class="label">Example</span>
+<br>The following code renders all objects in the fisix engine to the screen
+   <div class='listing'><pre>
+   var myEngine:FisixEngine = new FisixEngine()
+   myEngine.render(root.graphics)
+   </pre></div>
+   <p></p>
+</div>
+<a name="renderConstraints()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderConstraints</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderConstraints(g:Graphics):void</code><p>Renders all the constraints within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderFisixObjects()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderFisixObjects</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderFisixObjects(g:Graphics):void</code><p>Renders all the FisixObjects within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderGuides()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderGuides</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderGuides(g:Graphics):void</code><p>Renders all the guide particles within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderMagnets()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderMagnets</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderMagnets(g:Graphics):void</code><p>Renders all the magnets within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderParticles()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderParticles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderParticles(g:Graphics):void</code><p>Renders all the particles within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderPolygons()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderPolygons</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderPolygons(g:Graphics):void</code><p>Renders all the polygons within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="renderSurfaces()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">renderSurfaces</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function renderSurfaces(g:Graphics):void</code><p>Renders all the surfaces within the FisixObject.
+   This method is automatically invoked by render()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#render()" target="">render()</a>
+</div>
+</div>
+<a name="rotateAll()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotateAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rotateAll(ang:Number, center:<a href="Vector.html">Vector</a> = null):void</code><p>Rotates all children of the object by the given angle.
+   Use this method for fixed objects and rotationalThrust() for dynamic objects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">ang</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">center</span>:<a href="Vector.html">Vector</a></code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#rotationalThrust()" target="">rotationalThrust()</a>
+</div>
+</div>
+<a name="rotationalForce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotationalForce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rotationalForce(deg:Number, center:<a href="Vector.html">Vector</a> = null):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">deg</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">center</span>:<a href="Vector.html">Vector</a></code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="rotationalThrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotationalThrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rotationalThrust(deg:Number, center:<a href="Vector.html">Vector</a> = null):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">deg</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">center</span>:<a href="Vector.html">Vector</a></code> (default = <code>null</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="scale()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">scale</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function scale(scaleX:Number, scaleY:Number, flipAngularConstraints:Boolean = false, pivot:<a href="Vector.html">Vector</a> = null):void</code><p>Scales all the objects withing the FisixObject.
+   When scaling, 1 means no scale, 2 200% scale, etc...
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">scaleX</span>:Number</code> &mdash; x scale multiplier
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">scaleY</span>:Number</code> &mdash; y scale multiplier
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">flipAngularConstraints</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; Set this to true if you are flipping your fisix object and it contains angular constraints.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">pivot</span>:<a href="Vector.html">Vector</a></code> (default = <code>null</code>)<code></code> &mdash; The center point in global space over which to rotate. Leave at null to use the FisixObject's center.
+   </td>
+</tr>
+</table>
+</div>
+<a name="setAllDetectionModes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setAllDetectionModes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setAllDetectionModes(m:int, recursive:Boolean = true):void</code><p>overrides the collision detection mode of all objects within the FisixObject and sets them to the given value.
+   This does not affect the settings of objects added after this call
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:int</code> &mdash; an integer representing the mode of detection
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setDetectionMode()" target="">setDetectionMode()</a>
+<br>
+<a href="../collisions/DetectionModes.html" target="">com.fileitup.fisixengine.collisions.DetectionModes</a>
+</div>
+</div>
+<a name="setAllReactionModes()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setAllReactionModes</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setAllReactionModes(m:int, recursive:Boolean = true):void</code><p>overrides the collision reaction mode of all objects within the FisixObject and sets them to the given value
+   This does not affect the settings of objects added after this call
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:int</code> &mdash; an integer representing the mode of detection
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setDetectionMode()" target="">setDetectionMode()</a>
+<br>
+<a href="../collisions/ReactionModes.html" target="">com.fileitup.fisixengine.collisions.ReactionModes</a>
+</div>
+</div>
+<a name="setBounce()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setBounce</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setBounce(b:Number, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setBounds()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setBounds</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setBounds(b:<a href="../utils/BoundingBox.html">BoundingBox</a>):void</code><p>
+   Sets the bounding rectangle of all the objects within the FisixObject.
+   </p><p>
+   These may be used to contain objects within a certain area
+   Or automatically remove them when they leave the bounds
+   </p>
+   
+   <span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">b</span>:<a href="../utils/BoundingBox.html">BoundingBox</a></code> &mdash; a BoundingBox object
+   
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#boundsCollisions" target="">boundsCollisions</a>
+</div>
+</div>
+<a name="setCenter()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setCenter</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setCenter(cX:Number, cY:Number, thrustObject:Boolean = false):void</code><p>Moves all children of the object so that their center corresponds with the given values.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">cX</span>:Number</code> &mdash; Global x position to be centered at
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">cY</span>:Number</code> &mdash; Global y position to be centered at
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">thrustObject</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; If true, the movement of the fisix object is treated as a thrust, which adds the movement vector to the velocity.
+   This yields more physically accurate results, but shouldn't be used at instantiation.
+   </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#thrust()" target="">thrust()</a>
+</div>
+</div>
+<a name="setDrag()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setDrag</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setDrag(d:Number, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">d</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setFixed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setFixed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setFixed(f:Boolean, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:Boolean</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setFriction()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setFriction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setFriction(f:Number, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">f</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setIterations()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setIterations</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setIterations(iter:int):void</code><p>Sets the amount of times per frame that the collisions and constraints within this object's children should be solved.
+   <br><br><b>Note: </b> The amount of times a fisix object solves itself depends on it's iterations property and it's parent's iterations.
+   <br>If for example, you set your engine's iterations to 5, and you add a FisixObject and set it's iterations to 6, everything within that fisix object will be solved 30 times,
+   <b>and that's way too much</b>.
+   
+   <br><br><i>More iterations make the object more rigid but also take more proccessing time</i>
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">iter</span>:int</code> &mdash; An integer value (starting at 1)
+   </td>
+</tr>
+</table>
+</div>
+<a name="setMagnetic()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMagnetic</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMagnetic(m:Boolean, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">m</span>:Boolean</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setTraction()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setTraction</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setTraction(t:Number, recursive:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">t</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="setVelocity()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setVelocity</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setVelocity(vel:<a href="Vector.html">Vector</a>, checkAA:Boolean = true):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">vel</span>:<a href="Vector.html">Vector</a></code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkAA</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+</div>
+<a name="staticUpdate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">staticUpdate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function staticUpdate():void</code>
+</div>
+<a name="thrust()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrust</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function thrust(tX:Number, tY:Number, checkAA:Boolean = true):void</code><p>Thrusts all collision objects in the object with the given force
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tX</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tY</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">checkAA</span>:Boolean</code> (default = <code>true</code>)<code></code></td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">Particle.thrust()</div>
+</div>
+<a name="updateDisplays()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">updateDisplays</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function updateDisplays():void</code><p>updates all the DisplayAttachers in the engine.
+   This method is invoked automatically by the engine.
+   </p></div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

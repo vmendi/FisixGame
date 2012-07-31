@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Constraint,com.fileitup.fisixengine.primitives.Constraint,parent,unloadOnBreak,broken,breakPoint,restLength,min,max,stiffness,solve,solveConstraint,setMinMax,render,onBreak,breakConstraint,unload,onUnload,dispose" name="keywords">
+<title>com.fileitup.fisixengine.primitives.Constraint</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Constraint - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/primitives/Constraint.html&amp;com/fileitup/fisixengine/primitives/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Constraint</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Constraint"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.primitives</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class Constraint</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Implements</td><td><a href="../core/EngineObject.html">EngineObject</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Subclasses</td><td><a href="../constraints/AngularConstraint.html">AngularConstraint</a>, <a href="../constraints/SpringConstraint.html">SpringConstraint</a></td>
+</tr>
+</table>
+<p></p>The base class upon which all constraints are created.
+  This class is never used as a constraint, but is instead extended.
+  
+  <p>All constraints have the following capabilities:
+  <br>   - breaking point through the <i>breakPoint</i> property
+  <br>   - min/max values to constrain withing a range rather than a single value
+  </p>
+  For specific features, see the individual constraint objects
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/package-detail.html" target="">com.fileitup.fisixengine.constraints</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#breakPoint">breakPoint</a> : Number<div class="summaryTableDescription">The point at which a constraint should be broken.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#broken">broken</a> : Boolean<div class="summaryTableDescription">[read-only]Tells you whether or not a constraint is currently broken.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#max">max</a> : Number<div class="summaryTableDescription">The upper range of the constraint.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#min">min</a> : Number<div class="summaryTableDescription">The lower range of the constraint.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#restLength">restLength</a> : Number<div class="summaryTableDescription">The length that the constraint will attempt to maintain.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#stiffness">stiffness</a> : Number<div class="summaryTableDescription">A value between 0 - 1 representing the stiffness of the constraint.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#unloadOnBreak">unloadOnBreak</a> : Boolean = true<div class="summaryTableDescription">When true, the constraint is removed from the simulation when broken.</div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#Constraint()">Constraint</a>()</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#render()">render</a>(g:Graphics):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMinMax()">setMinMax</a>(minimum:Number, maximum:Number):void</div>
+<div class="summaryTableDescription">Sets both min and max values in one line
+   </div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#solve()">solve</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#unload()">unload</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<table id="summaryTableProtectedMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#breakConstraint()">breakConstraint</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onBreak()">onBreak</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#solveConstraint()">solveConstraint</a>(len:Number, len2:Number):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">Constraint</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="breakPoint"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">breakPoint</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>breakPoint:Number</code>&nbsp;&nbsp;[read-write]<p>The point at which a constraint should be broken.
+   </p><p>
+   This is set to 0 by default at which value the constraint is unbreakable.
+   </p>
+   <p>
+   For spring and stick constraints, this value represents the percentage of the constraint's stretch.
+   <br>1 represents no stretch (breaking the constraint immidiately)
+   <br>1.5 represents a 50% stretch, and so on.
+   <br>valid values are any number greater than 0
+   </p>
+   <p>
+   For angular constraints, this value represents the amount of degrees that a constraint must go over it's range in order to break.
+   <br>valid values are degree-values between 0 and 360. No negatives.
+   </p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get breakPoint():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set breakPoint(value:Number):void</code>
+<br>
+</div>
+<a name="broken"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">broken</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>broken:Boolean</code>&nbsp;&nbsp;[read-only]<p>Tells you whether or not a constraint is currently broken.
+   This is only usable if <b><i>unloadOnBrak</i></b> is set to true.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get broken():Boolean</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Constraint.html#unloadOnBreak" target="">unloadOnBreak</a>
+</div>
+</div>
+<a name="max"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">max</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>max:Number</code>&nbsp;&nbsp;[read-write]<p>The upper range of the constraint.
+   </p><p>
+   By setting this value, you are disabling the use of the restLength property, so it's good practice to set both the min and max values at the same time.
+   <br>
+   Note that valid values are always positive values.
+   <br>
+   In order to disable the maximum bound, set this property to a negative value.
+   </p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get max():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set max(value:Number):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Constraint.html#setMinMax" target="">setMinMax</a>
+</div>
+</div>
+<a name="min"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">min</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>min:Number</code>&nbsp;&nbsp;[read-write]<p>The lower range of the constraint.
+   </p><p>
+   By setting this value, you are disabling the use of the restLength property, so it's good practice to set both the min and max values at the same time.
+   <br>
+   Note that valid values are always positive values.
+   <br>
+   In order to disable the minimum bound, set this property to a negative value.
+   </p>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get min():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set min(value:Number):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Constraint.html#setMinMax" target="">setMinMax</a>
+</div>
+</div>
+<a name="parent"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">parent</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var parent:<a href="../core/FisixObject.html">FisixObject</a></code>
+</div>
+<a name="restLength"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">restLength</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>restLength:Number</code>&nbsp;&nbsp;[read-write]<p>The length that the constraint will attempt to maintain.
+   </p><p>
+   For spring and stick constraints, this represents a pixel distance
+   <br>For angular constraints, this represents a degree value between 0 and 360.
+   <br>For more information about angle measures in angular constraints, see the documentation for the AngularConstraint class
+   <br><br>
+   <b>Note</b> that by setting this value you disable the use of min/max values (in other words, the constraint is no longer bound to a range, but only one value)
+   <br><br>
+   <span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get restLength():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set restLength(value:Number):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../constraints/AngularConstraint.html" target="">com.fileitup.fisixengine.constraints.AngularConstraint</a>
+<br>
+<a href="../primitives/Constraint.html#min" target="">min</a>
+<br>
+<a href="../primitives/Constraint.html#max" target="">max</a>
+</div>
+</div>
+<a name="stiffness"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">stiffness</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>stiffness:Number</code>&nbsp;&nbsp;[read-write]<p>A value between 0 - 1 representing the stiffness of the constraint.
+   <br>1 represents a completely stiff constraint. The closer the value is to 0, the more 'springy' the constraint is.
+   <br><br><b>Note</b> that another factor which affects the stiffness of constraints is the amount of times the constraints are solved per frame (Through the 'iterations' property)<br>
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get stiffness():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set stiffness(value:Number):void</code>
+<br>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../core/FisixObject.html#setIterations()" target="">com.fileitup.fisixengine.core.FisixObject.setIterations()</a>
+</div>
+</div>
+<a name="unloadOnBreak"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unloadOnBreak</td><td class="detailHeaderType">property</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var unloadOnBreak:Boolean = true</code><p>When true, the constraint is removed from the simulation when broken.
+   By default this value is true, but when set to false it creates very interesting results.
+   </p><p>when set to false, the constraint becomes inactive when broken, but as soon as it comes within valid range, it becomes active again.
+   Give it a try
+   </p>
+   <br>
+   If you'd like to know whether or not the constraint is currently broken, refer to the constraint's 'broken' property.
+   <br>
+   <br>
+   <p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../primitives/Constraint.html#broken" target="">broken</a>
+</div>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="Constraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">Constraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function Constraint()</code>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="breakConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">breakConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function breakConstraint():void</code>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function dispose():void</code>
+</div>
+<a name="onBreak()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onBreak</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onBreak():void</code>
+</div>
+<a name="onUnload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">onUnload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function onUnload():void</code>
+</div>
+<a name="render()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function render(g:Graphics):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:Graphics</code></td>
+</tr>
+</table>
+</div>
+<a name="setMinMax()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMinMax</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMinMax(minimum:Number, maximum:Number):void</code><p>Sets both min and max values in one line
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">minimum</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">maximum</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="solve()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solve</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function solve():void</code>
+</div>
+<a name="solveConstraint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solveConstraint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>protected function solveConstraint(len:Number, len2:Number):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">len</span>:Number</code></td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">len2</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="unload()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">unload</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function unload():void</code>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

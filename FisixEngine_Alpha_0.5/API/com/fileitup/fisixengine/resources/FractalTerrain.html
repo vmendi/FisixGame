@@ -1,0 +1,1200 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="FractalTerrain,com.fileitup.fisixengine.resources.FractalTerrain,surfacePoints" name="keywords">
+<title>com.fileitup.fisixengine.resources.FractalTerrain</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'FractalTerrain - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/resources/FractalTerrain.html&amp;com/fileitup/fisixengine/resources/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;FractalTerrain</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class FractalTerrain"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.resources</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class FractalTerrain</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">FractalTerrain <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../core/FisixObject.html">FisixObject</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+<p></p>A modified FisixObject which, on instantiation, creates a fractal terrain within itself, composed of static surfaces.
+  Once the terrain is created, its attributes like height and smoothness cannot be changed.
+  
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#active">active</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to treat this object as a part of the simulation<br>
+   This value may be changed at any time during the simulation
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#axisAligned">axisAligned</a> : Boolean = false<div class="summaryTableDescription">When set to true, the FisixObject will be Rigid and Axis-Aligned.<br>
+   When the FisixObject is 'axisAligned', all the Particles within will always maintain the same distance to eachother.<br>
+   Additionally, the entire object will not rotate.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#bounce">bounce</a> : Number = .5<div class="summaryTableDescription">The object's coefficient of reinstiturion.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#boundsCollisions">boundsCollisions</a> : Boolean = false<div class="summaryTableDescription">When true, all children of the FisixObject will be confined to the boundaries set by setBounds()
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#collidable">collidable</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to check collisions against this object
+   You may set this value at any time during the sumulation to turn collision detection on/off for this object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#color">color</a> : int = -1<div class="summaryTableDescription">The object's rendering color.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#constraints">constraints</a> : Array<div class="summaryTableDescription">an array containing all of the Constraints in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#constraints">constraints</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#containers">containers</a> : Array<div class="summaryTableDescription">an array containing all of the Containers in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#containers">containers</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#displayAttachers">displayAttachers</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#drag">drag</a> : Number = 0<div class="summaryTableDescription">A value between 0 - 1 representing the amount of drag to apply on all children of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#dynamicObjectCollisions">dynamicObjectCollisions</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#fisixObjects">fisixObjects</a> : Array<div class="summaryTableDescription">an array containing all of the FisixObjects in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#fisixObjects">fisixObjects</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#fixed">fixed</a> : Boolean<div class="summaryTableDescription">A fixed CollisionObject is never influenced by collisions
+   You may change this value at any time
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#friction">friction</a> : Number = 0<div class="summaryTableDescription">The object's coefficient of friction.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#guides">guides</a> : Array<div class="summaryTableDescription">an array containing all of the GuideParticles in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#guides">guides</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#inheritAttributesOnAdd">inheritAttributesOnAdd</a> : Boolean = true<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#innerCollisions">innerCollisions</a> : Boolean = true<div class="summaryTableDescription">When true, objects within the FisixObject will collide with among themselves.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#lastCollision">lastCollision</a> : <a href="../collisions/CollisionData.html">CollisionData</a>
+<div class="summaryTableDescription">An internal object which stores the information of the object's last collision
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#magnetic">magnetic</a> : Boolean = true<div class="summaryTableDescription">If true, the object is affected by magnets
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#magnets">magnets</a> : Array<div class="summaryTableDescription">an array containing all of the Magnets in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#magnets">magnets</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#minX">minX</a> : Number<div class="summaryTableDescription">Hold the dimensions of the object's bounding box.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#name">name</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription">The parent of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#particles">particles</a> : Array<div class="summaryTableDescription">an array containing all of the Particles in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#particles">particles</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#polygons">polygons</a> : Array<div class="summaryTableDescription">an array containing all of the Polygons in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#raycast">raycast</a> : Boolean<div class="summaryTableDescription">An internal property, used by the engine
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#renderBoundingBoxes">renderBoundingBoxes</a> : Boolean = false<div class="summaryTableDescription">When true, calling render() will also render the bounding boxes of all children objects
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#surfacePoints">surfacePoints</a> : Array<div class="summaryTableDescription">All the Vectors used to represent the terrain
+   </div>
+</td><td class="summaryTableOwnerCol">FractalTerrain</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#surfaces">surfaces</a> : Array<div class="summaryTableDescription">an array containing all of the Surfaces in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#surfaces">surfaces</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#thrusts">thrusts</a> : Array<div class="summaryTableDescription">an array containing all of the Thrusts in the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#thrusts">thrusts</a> : Array<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#traction">traction</a> : Number = 1<div class="summaryTableDescription">The object's traction.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#type">type</a> : String<div class="summaryTableDescription">A string representing the type of object you are dealing with
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#bounds">bounds</a> : <a href="../utils/BoundingBox.html">BoundingBox</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#detectionMode">detectionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/FisixObject.html#iterations">iterations</a> : int = 3<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mFixed">mFixed</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mMaterial">mMaterial</a> : String<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mStatic">mStatic</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#myType">myType</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#reactionMode">reactionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#useRaycasting">useRaycasting</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#FractalTerrain()">FractalTerrain</a>(start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, height:Number, smooth:Number = 2, levels:int = 5, thickness:Number = 0, surfaceNormal:<a href="../core/Vector.html">Vector</a> = null, staticTerrain:Boolean = true)</div>
+<div class="summaryTableDescription">Creates a FractalTerrain
+   It is important to note that the terrain will be created from left to right, so providing a start point to the right of the end point will create an upside-down terrain.</div>
+</td><td class="summaryTableOwnerCol">FractalTerrain</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#aabbIntersection()">aabbIntersection</a>(obj:<a href="../core/CollisionObject.html">CollisionObject</a>):Boolean</div>
+<div class="summaryTableDescription">Returns whether or not this object's AABB is intersecting with the given object's AABB
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addConstraint()">addConstraint</a>(c:<a href="../primitives/Constraint.html">Constraint</a>):<a href="../primitives/Constraint.html">Constraint</a>
+</div>
+<div class="summaryTableDescription">Adds a constraint to the engine from an object previously instanciated.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addContainer()">addContainer</a>(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>):<a href="../primitives/FisixContainer.html">FisixContainer</a>
+</div>
+<div class="summaryTableDescription">Adds a container to the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addDisplayAttacher()">addDisplayAttacher</a>(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>
+</div>
+<div class="summaryTableDescription">Use to add a DisplayAttacher object to the simulation
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addMagnet()">addMagnet</a>(m:<a href="../primitives/Magnet.html">Magnet</a>):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Adds a Magnet Object to the simulation.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addObject()">addObject</a>(obj:<a href="../core/CollisionObject.html">CollisionObject</a>):<a href="../core/CollisionObject.html">CollisionObject</a>
+</div>
+<div class="summaryTableDescription">Used to add an object instantiated by the user to the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#addThrust()">addThrust</a>(t:<a href="../core/Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Adds a thrust to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#applyForce()">applyForce</a>(f:<a href="../core/Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">Applies a force to all of the dynamic objects within the FisixObject
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#applyForcePoint()">applyForcePoint</a>(f:<a href="../core/Vector.html">Vector</a>, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Applies a force at the given point.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#constraintAllParticles()">constraintAllParticles</a>(stiffness:Number = 1, breakPoint:Number = 0):void</div>
+<div class="summaryTableDescription">Constraints all of the particles of the object to eachother.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#explode()">explode</a>(pos:<a href="../core/Vector.html">Vector</a>, force:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">Create an explosion in the given position which will affect all the objects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#fireAfterChildCollision()">fireAfterChildCollision</a>(child:<a href="../core/CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fireAfterCollision()">fireAfterCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#fireOnChildCollision()">fireOnChildCollision</a>(child:<a href="../core/CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fireOnCollision()">fireOnCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fix()">fix</a>(f:Boolean = true):void</div>
+<div class="summaryTableDescription">Another way of setting the value 'fixed'.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#flipJoints()">flipJoints</a>():void</div>
+<div class="summaryTableDescription">Flips all the angular constraints in the FisixObject
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#getBounds()">getBounds</a>():<a href="../utils/BoundingBox.html">BoundingBox</a>
+</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#getCenter()">getCenter</a>():<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Returns the center point of all the objects in the FisixObject
+   Editing this vector will have no affects on the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getDetectionMode()">getDetectionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#getIterations()">getIterations</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getMaterial()">getMaterial</a>():String</div>
+<div class="summaryTableDescription">The name of the current material applied to the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getNormalAngleAt()">getNormalAngleAt</a>(p:<a href="../core/Vector.html">Vector</a>):Number</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getNormalAt()">getNormalAt</a>(p:<a href="../core/Vector.html">Vector</a>, dirVector:<a href="../core/Vector.html">Vector</a> = null):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getReactionMode()">getReactionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#integrate()">integrate</a>(dt:Number = 1):void</div>
+<div class="summaryTableDescription">Integrates all children forward in time.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#isStatic()">isStatic</a>():Boolean</div>
+<div class="summaryTableDescription">Returns a value indicating whether or not this object was made static.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#makeStatic()">makeStatic</a>():void</div>
+<div class="summaryTableDescription">Tells the engine to treat all objects within this FisixObject as static.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#move()">move</a>(tX:Number, tY:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">simply translates all children of the object by the given x and y offsets
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newAngularConstraint()">newAngularConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, pC:<a href="../primitives/Particle.html">Particle</a>, min:Number = -1, max:Number = -1):<a href="../constraints/AngularConstraint.html">AngularConstraint</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newCircleContainer()">newCircleContainer</a>(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/CircleContainer.html">CircleContainer</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a CircleConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newCircleParticle()">newCircleParticle</a>(x:Number, y:Number, r:Number):<a href="../particles/CircleParticle.html">CircleParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a CircleParticle in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newConstraintAttacher()">newConstraintAttacher</a>(mc:DisplayObject, springConstraint:<a href="../constraints/SpringConstraint.html">SpringConstraint</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/ConstraintAttacher.html">ConstraintAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a ConstraintAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newDisplayAttacher()">newDisplayAttacher</a>(mc:DisplayObject, v1:<a href="../core/Vector.html">Vector</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newDisplayAttacher2()">newDisplayAttacher2</a>(mc:DisplayObject, v1:<a href="../core/Vector.html">Vector</a>, v2:<a href="../core/Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher2.html">DisplayAttacher2</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher2 to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newDisplayAttacher3()">newDisplayAttacher3</a>(mc:DisplayObject, v1:<a href="../core/Vector.html">Vector</a>, v2:<a href="../core/Vector.html">Vector</a>, v3:<a href="../core/Vector.html">Vector</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/DisplayAttacher3.html">DisplayAttacher3</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DisplayAttacher3 to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newDynamicSurface()">newDynamicSurface</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, r:Number = 0):<a href="../surfaces/DynamicSurface.html">DynamicSurface</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a DynamicSurface in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newFisixObject()">newFisixObject</a>():<a href="../core/FisixObject.html">FisixObject</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a FisixObject in one line
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newGuideParticle()">newGuideParticle</a>(x:Number, y:Number):<a href="../particles/GuideParticle.html">GuideParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a GuideParticle in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newMagnet()">newMagnet</a>(force:Number, x:Number, y:Number):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a Magnet in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newParticleAttacher()">newParticleAttacher</a>(mc:DisplayObject, particle:<a href="../primitives/Particle.html">Particle</a>, xOffset:Number = 0, yOffset:Number = 0):<a href="../graphics/ParticleAttacher.html">ParticleAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a ParticleAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newSpringConstraint()">newSpringConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, stiffness:Number = 0.5, restlength:Number = -1):<a href="../constraints/SpringConstraint.html">SpringConstraint</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a SpringConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newStickConstraint()">newStickConstraint</a>(pA:<a href="../primitives/Particle.html">Particle</a>, pB:<a href="../primitives/Particle.html">Particle</a>, restlength:Number = -1):<a href="../constraints/StickConstraint.html">StickConstraint</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a StickConstraint in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newSurface()">newSurface</a>(vA:<a href="../core/Vector.html">Vector</a>, vB:<a href="../core/Vector.html">Vector</a>, r:Number = 0):<a href="../primitives/Surface.html">Surface</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a static Surface in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newSurfaceAttacher()">newSurfaceAttacher</a>(mc:DisplayObject, surface:<a href="../primitives/Surface.html">Surface</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/SurfaceAttacher.html">SurfaceAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a SurfaceAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newThrust()">newThrust</a>(x:Number, y:Number):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a Thrust in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newWheelAttacher()">newWheelAttacher</a>(mc:DisplayObject, wheel:<a href="../particles/WheelParticle.html">WheelParticle</a>, angOff:Number = 0, mult:Number = 1):<a href="../graphics/WheelAttacher.html">WheelAttacher</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a WheelAttacher to the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newWheelContainer()">newWheelContainer</a>(x:Number, y:Number, rad:Number, innerDynamics:Boolean = true):<a href="../containers/WheelContainer.html">WheelContainer</a>
+</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#newWheelParticle()">newWheelParticle</a>(x:Number, y:Number, r:Number):<a href="../particles/WheelParticle.html">WheelParticle</a>
+</div>
+<div class="summaryTableDescription">Creates and adds a WheelParticle in one line.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onInit()">onInit</a>():void</div>
+<div class="summaryTableDescription">Called after the object is initiated by a FisixObject to which it was added
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#pickParticle()">pickParticle</a>(x:Number, y:Number, radius:Number = 0):<a href="../particles/CircleParticle.html">CircleParticle</a>
+</div>
+<div class="summaryTableDescription">Finds a particle located at the given position
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#pointForce()">pointForce</a>(point:<a href="../core/Vector.html">Vector</a>, force:Number):void</div>
+<div class="summaryTableDescription">
+   Applies a force value on the object from the given point.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeConstraint()">removeConstraint</a>(c:<a href="../primitives/Constraint.html">Constraint</a>, disposeObject:Boolean = false):<a href="../primitives/Constraint.html">Constraint</a>
+</div>
+<div class="summaryTableDescription">Removes a constraint previously added to the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeContainer()">removeContainer</a>(c:<a href="../primitives/FisixContainer.html">FisixContainer</a>, disposeObject:Boolean = false):<a href="../primitives/FisixContainer.html">FisixContainer</a>
+</div>
+<div class="summaryTableDescription">Removes a Container previously added.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeDisplayAttacher()">removeDisplayAttacher</a>(d:<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>):<a href="../graphics/DisplayAttacher.html">DisplayAttacher</a>
+</div>
+<div class="summaryTableDescription">Use to remove a DisplayAttacher object that was added to the simulation
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeMagnet()">removeMagnet</a>(m:<a href="../primitives/Magnet.html">Magnet</a>, disposeObject:Boolean = false):<a href="../primitives/Magnet.html">Magnet</a>
+</div>
+<div class="summaryTableDescription">Removes a Magnet that was previously added.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeObject()">removeObject</a>(obj:<a href="../core/CollisionObject.html">CollisionObject</a>, disposeObject:Boolean = false):<a href="../core/CollisionObject.html">CollisionObject</a>
+</div>
+<div class="summaryTableDescription">Removes any object added using addObject().</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#removeThrust()">removeThrust</a>(t:<a href="../core/Vector.html">Vector</a>):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Removes a thrust added with addThrust().</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#render()">render</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">renders all children to the given Graphics object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#renderBoundingBox()">renderBoundingBox</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders a rectangle representing the bounding box to the graphics object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderConstraints()">renderConstraints</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the constraints within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderFisixObjects()">renderFisixObjects</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the FisixObjects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderGuides()">renderGuides</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the guide particles within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderMagnets()">renderMagnets</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the magnets within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderParticles()">renderParticles</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the particles within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderPolygons()">renderPolygons</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the polygons within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#renderSurfaces()">renderSurfaces</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders all the surfaces within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#rotateAll()">rotateAll</a>(ang:Number, center:<a href="../core/Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription">Rotates all children of the object by the given angle.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#rotationalForce()">rotationalForce</a>(deg:Number, center:<a href="../core/Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#rotationalThrust()">rotationalThrust</a>(deg:Number, center:<a href="../core/Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#scale()">scale</a>(scaleX:Number, scaleY:Number, flipAngularConstraints:Boolean = false, pivot:<a href="../core/Vector.html">Vector</a> = null):void</div>
+<div class="summaryTableDescription">Scales all the objects withing the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setAllDetectionModes()">setAllDetectionModes</a>(m:int, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">overrides the collision detection mode of all objects within the FisixObject and sets them to the given value.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setAllReactionModes()">setAllReactionModes</a>(m:int, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription">overrides the collision reaction mode of all objects within the FisixObject and sets them to the given value
+   This does not affect the settings of objects added after this call
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setBounce()">setBounce</a>(b:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setBounds()">setBounds</a>(b:<a href="../utils/BoundingBox.html">BoundingBox</a>):void</div>
+<div class="summaryTableDescription">
+   Sets the bounding rectangle of all the objects within the FisixObject.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setCenter()">setCenter</a>(cX:Number, cY:Number, thrustObject:Boolean = false):void</div>
+<div class="summaryTableDescription">Moves all children of the object so that their center corresponds with the given values.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#setDetectionMode()">setDetectionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision detection mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setDrag()">setDrag</a>(d:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setFixed()">setFixed</a>(f:Boolean, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setFriction()">setFriction</a>(f:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setIterations()">setIterations</a>(iter:int):void</div>
+<div class="summaryTableDescription">Sets the amount of times per frame that the collisions and constraints within this object's children should be solved.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setMagnetic()">setMagnetic</a>(m:Boolean, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#setMaterial()">setMaterial</a>(mName:String):void</div>
+<div class="summaryTableDescription">Sets the material of the object
+   This modifies the object's 'friction', 'bounce', 'color' and 'traction' properties.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#setReactionMode()">setReactionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision reaction mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setTraction()">setTraction</a>(t:Number, recursive:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#setVelocity()">setVelocity</a>(vel:<a href="../core/Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#thrust()">thrust</a>(tX:Number, tY:Number, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">Thrusts all collision objects in the object with the given force
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#thrustPoint()">thrustPoint</a>(tX:Number, tY:Number, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">
+   Unlike thrust which moves the whole object, thrustPoint() hits the object from the given point, with the given x,y values and adds the values to its velocity.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#unload()">unload</a>():void</div>
+<div class="summaryTableDescription">Removes the object from the engine and disposes of it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#updateBoundingBox()">updateBoundingBox</a>():void</div>
+<div class="summaryTableDescription">Updates the bounding box of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#updateDisplays()">updateDisplays</a>():void</div>
+<div class="summaryTableDescription">updates all the DisplayAttachers in the engine.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#afterChildCollision()">afterChildCollision</a>(child:<a href="../core/CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#afterCollision()">afterCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action after a collision is resolved
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#afterUnload()">afterUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions after the object has been unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#initChild()">initChild</a>(c:<a href="../core/CollisionObject.html">CollisionObject</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#onChildCollision()">onChildCollision</a>(child:<a href="../core/CollisionObject.html">CollisionObject</a>, data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onCollision()">onCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action at the time a collision is detected
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions once the object is unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/FisixObject.html#staticUpdate()">staticUpdate</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/FisixObject.html">FisixObject</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="surfacePoints"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">surfacePoints</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public var surfacePoints:Array</code><p>All the Vectors used to represent the terrain
+   </p></div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="FractalTerrain()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">FractalTerrain</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function FractalTerrain(start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, height:Number, smooth:Number = 2, levels:int = 5, thickness:Number = 0, surfaceNormal:<a href="../core/Vector.html">Vector</a> = null, staticTerrain:Boolean = true)</code><p>Creates a FractalTerrain
+   It is important to note that the terrain will be created from left to right, so providing a start point to the right of the end point will create an upside-down terrain.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">start</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; The point in global space at which to start the terrain.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">end</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; The point in global space at which to end the terrain.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">height</span>:Number</code> &mdash; The maximum height of the terrain
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">smooth</span>:Number</code> (default = <code>2</code>)<code></code> &mdash; A value 1 or higher that represents the smoothness of the terrain. The higher this value, the less jagged the terrain will be.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">levels</span>:int</code> (default = <code>5</code>)<code></code> &mdash; The higher this number, the more detailed the terrain will be. Setting this number too high may cause you application to crash because of the fractal terrain algorithm's recursive nature.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">thickness</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The thickness of the surfaces created for the terrain.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">surfaceNormal</span>:<a href="../core/Vector.html">Vector</a></code> (default = <code>null</code>)<code></code> &mdash; Leave this null for automatic normal detection, or change it to affect the way the terrain is oriented.
+   For example, providing the argument - new Vector(0,1) will make sure that the terrain always points up.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">staticTerrain</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; Whether or not the terrain should be made static. If the terrain will never move, it is recommended that it be made static.
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

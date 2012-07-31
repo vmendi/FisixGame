@@ -1,0 +1,902 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="WheelParticle,com.fileitup.fisixengine.particles.WheelParticle,angle,setRadius,setMaxSpeed,getMaxSpeed,integrate,rotateWheel,applyForcePoint,thrustPoint,solveReactions,render,dispose" name="keywords">
+<title>com.fileitup.fisixengine.particles.WheelParticle</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'WheelParticle - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/particles/WheelParticle.html&amp;com/fileitup/fisixengine/particles/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;WheelParticle</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#propertySummary">Properties</a>&nbsp;| <a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class WheelParticle"); titleBar_setSubNav(false,true,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.particles</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public class WheelParticle</td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Inheritance</td><td class="inheritanceList">WheelParticle <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="CircleParticle.html">CircleParticle</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../primitives/Particle.html">Particle</a> <img class="inheritArrow" alt="Inheritance" title="Inheritance" src="../../../../images/inherit-arrow.gif"> <a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+<p></p>Similar to a CircleParticle, but can rotate.
+  <p></p>
+<p>
+<span class="classHeaderTableLabel">See also</span>
+</p>
+<div class="seeAlso">
+<a href="CircleParticle.html" target="">CircleParticle</a>
+</div>
+<br>
+<hr>
+</div>
+<a name="propertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProperty" id="hideInheritedProperty">
+<a onclick="javascript:setInheritedVisible(false,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Properties</a>
+</div>
+<div class="showInheritedProperty" id="showInheritedProperty">
+<a onclick="javascript:setInheritedVisible(true,'Property');" href="#propertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Properties</a>
+</div>
+</div>
+<table id="summaryTableProperty" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#accel">accel</a> : <a href="../core/Vector.html">Vector</a>
+<div class="summaryTableDescription">A vector which stores the current acceleration vector of the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#active">active</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to treat this object as a part of the simulation<br>
+   This value may be changed at any time during the simulation
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol"><a class="signatureLink" href="#angle">angle</a> : Number<div class="summaryTableDescription">The absolute angle of the wheel in degrees.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#bounce">bounce</a> : Number = .5<div class="summaryTableDescription">The object's coefficient of reinstiturion.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#collidable">collidable</a> : Boolean = true<div class="summaryTableDescription">Tells the engine whether or not to check collisions against this object
+   You may set this value at any time during the sumulation to turn collision detection on/off for this object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#color">color</a> : int = -1<div class="summaryTableDescription">The object's rendering color.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#dynamicObjectCollisions">dynamicObjectCollisions</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#fixed">fixed</a> : Boolean<div class="summaryTableDescription">A fixed CollisionObject is never influenced by collisions
+   You may change this value at any time
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#friction">friction</a> : Number = 0<div class="summaryTableDescription">The object's coefficient of friction.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#inheritAttributesOnAdd">inheritAttributesOnAdd</a> : Boolean = true<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#inverseMass">inverseMass</a> : Number<div class="summaryTableDescription">Used for engine calculations.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#lastCollision">lastCollision</a> : <a href="../collisions/CollisionData.html">CollisionData</a>
+<div class="summaryTableDescription">An internal object which stores the information of the object's last collision
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#magnetic">magnetic</a> : Boolean = true<div class="summaryTableDescription">If true, the object is affected by magnets
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#mass">mass</a> : Number<div class="summaryTableDescription">The mass of the object (between 0 - infinity)
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#minX">minX</a> : Number<div class="summaryTableDescription">Hold the dimensions of the object's bounding box.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#name">name</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#old">old</a> : <a href="../core/Vector.html">Vector</a>
+<div class="summaryTableDescription">A vector which stores the position of the object before the last integration in global space
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#old2">old2</a> : <a href="../core/Vector.html">Vector</a>
+<div class="summaryTableDescription">A vector representing the object's speed.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#parent">parent</a> : <a href="../core/FisixObject.html">FisixObject</a>
+<div class="summaryTableDescription">The parent of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#pos">pos</a> : <a href="../core/Vector.html">Vector</a>
+<div class="summaryTableDescription">A vector which stores the position of the object in global coordinates
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="CircleParticle.html#radius">radius</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="CircleParticle.html">CircleParticle</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#raycast">raycast</a> : Boolean<div class="summaryTableDescription">An internal property, used by the engine
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#traction">traction</a> : Number = 1<div class="summaryTableDescription">The object's traction.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#type">type</a> : String<div class="summaryTableDescription">A string representing the type of object you are dealing with
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#velocity">velocity</a> : <a href="../core/Vector.html">Vector</a>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedPropertySummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Properties</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedProperty" id="hideInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Properties</a>
+</div>
+<div class="showInheritedProtectedProperty" id="showInheritedProtectedProperty">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedProperty');" href="#protectedPropertySummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Properties</a>
+</div>
+</div>
+<table id="summaryTableProtectedProperty" class="summaryTable hideInheritedProtectedProperty" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Property</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#detectionMode">detectionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#maxVel">maxVel</a> : Number<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mFixed">mFixed</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../primitives/Particle.html#mMass">mMass</a> : Number = 1<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mMaterial">mMaterial</a> : String<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#mStatic">mStatic</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#myType">myType</a> : String = ""<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#reactionMode">reactionMode</a> : int = 0<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedProperty">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol"><a class="signatureLink" href="../core/CollisionObject.html#useRaycasting">useRaycasting</a> : Boolean = false<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+</table>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedMethod" id="hideInheritedMethod">
+<a onclick="javascript:setInheritedVisible(false,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Public Methods</a>
+</div>
+<div class="showInheritedMethod" id="showInheritedMethod">
+<a onclick="javascript:setInheritedVisible(true,'Method');" href="#methodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Public Methods</a>
+</div>
+</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#WheelParticle()">WheelParticle</a>(x:Number, y:Number, r:Number)</div>
+<div class="summaryTableDescription">Creates a WheelParticle
+   </div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#aabbIntersection()">aabbIntersection</a>(obj:<a href="../core/CollisionObject.html">CollisionObject</a>):Boolean</div>
+<div class="summaryTableDescription">Returns whether or not this object's AABB is intersecting with the given object's AABB
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#addVelocity()">addVelocity</a>(vel:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Allows you to explicitly increase/decrease the velocity of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#applyForce()">applyForce</a>(f:<a href="../core/Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Applies a uniform force, moving the entire object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#applyForcePoint()">applyForcePoint</a>(force:<a href="../core/Vector.html">Vector</a>, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Applies a force at the given point on the rim of the circle
+   Unlike applyForce(), this method applies only the force perpendicular to the collision normal, which yields more accurate looking results.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#clone()">clone</a>():Object</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#dispose()">dispose</a>():void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#distanceSquaredTo()">distanceSquaredTo</a>(d:<a href="../primitives/Particle.html">Particle</a>):Number</div>
+<div class="summaryTableDescription">Calculates the distance squared to another Particle.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#distanceTo()">distanceTo</a>(d:<a href="../primitives/Particle.html">Particle</a>):Number</div>
+<div class="summaryTableDescription">Calculates the distance to another Particle
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fireAfterCollision()">fireAfterCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fireOnCollision()">fireOnCollision</a>():void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#fix()">fix</a>(f:Boolean = true):void</div>
+<div class="summaryTableDescription">Another way of setting the value 'fixed'.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getDetectionMode()">getDetectionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getMaterial()">getMaterial</a>():String</div>
+<div class="summaryTableDescription">The name of the current material applied to the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#getMaxSpeed()">getMaxSpeed</a>():Number</div>
+<div class="summaryTableDescription">Returns the maximum rotational speed of the wheel in degrees.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getNormalAngleAt()">getNormalAngleAt</a>(p:<a href="../core/Vector.html">Vector</a>):Number</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CircleParticle.html#getNormalAt()">getNormalAt</a>(p:<a href="../core/Vector.html">Vector</a>, dirVector:<a href="../core/Vector.html">Vector</a> = null):<a href="../core/Vector.html">Vector</a>
+</div>
+<div class="summaryTableDescription">Gets the tangent to the circle at the given global position
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CircleParticle.html">CircleParticle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#getReactionMode()">getReactionMode</a>():int</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#integrate()">integrate</a>(dt:<a href="">Number</a> = 1):void</div>
+<div class="summaryTableDescription">Integrates the object.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#isStatic()">isStatic</a>():Boolean</div>
+<div class="summaryTableDescription">Returns a value indicating whether or not this object was made static.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#makeStatic()">makeStatic</a>():void</div>
+<div class="summaryTableDescription">Makes the object static.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#move()">move</a>(mX:Number, mY:Number):void</div>
+<div class="summaryTableDescription">Similar to thrust, but does not change the object's velocity
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#moveTo()">moveTo</a>(mX:Number, mY:Number, ease:Number = 1):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onInit()">onInit</a>():void</div>
+<div class="summaryTableDescription">Called after the object is initiated by a FisixObject to which it was added
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#pointForce()">pointForce</a>(point:<a href="../core/Vector.html">Vector</a>, force:Number):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#render()">render</a>(g:<a href="">Graphics</a>):void</div>
+<div class="summaryTableDescription">Renders a primitive shape of the object to the given Graphics object.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#renderBoundingBox()">renderBoundingBox</a>(g:Graphics):void</div>
+<div class="summaryTableDescription">Renders a rectangle representing the bounding box to the graphics object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#rotateWheel()">rotateWheel</a>(r:Number):void</div>
+<div class="summaryTableDescription">
+   Rotates the wheel with the given degree value.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#rotationalForce()">rotationalForce</a>(deg:Number, center:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Applies a force vector derived from the given angle value
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#rotationalThrust()">rotationalThrust</a>(deg:Number, center:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Thrusts the object with a vector derived from the given angle value
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CircleParticle.html#setDetectionMode()">setDetectionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision detection mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="CircleParticle.html">CircleParticle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#setMaterial()">setMaterial</a>(mName:String):void</div>
+<div class="summaryTableDescription">Sets the material of the object
+   This modifies the object's 'friction', 'bounce', 'color' and 'traction' properties.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setMaxSpeed()">setMaxSpeed</a>(s:Number):void</div>
+<div class="summaryTableDescription">Sets the maximum rotational speed of the wheel in degrees.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#setPosition()">setPosition</a>(tX:Number, tY:Number):void</div>
+<div class="summaryTableDescription">Sets the position of the object in the given global position and resets it's acceleration and velocity.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#setRadius()">setRadius</a>(r:Number):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#setReactionMode()">setReactionMode</a>(m:int):void</div>
+<div class="summaryTableDescription"> Sets the collision reaction mode to be used by the object
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#setVelocity()">setVelocity</a>(vel:<a href="../core/Vector.html">Vector</a>, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">Allows you to explicitly set the velocity of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CircleParticle.html#solveBoundsCollisions()">solveBoundsCollisions</a>(w:<a href="../utils/BoundingBox.html">BoundingBox</a>):void</div>
+<div class="summaryTableDescription">Used to keep the object within the given rectangular boundaries.</div>
+</td><td class="summaryTableOwnerCol"><a href="CircleParticle.html">CircleParticle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#solveReactions()">solveReactions</a>():void</div>
+<div class="summaryTableDescription">
+   </div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#thrust()">thrust</a>(tX:Number, tY:Number, checkAA:Boolean = true):void</div>
+<div class="summaryTableDescription">
+   Moves the object uniformly with the given x,y values and adds the values to its velocity.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#thrustPoint()">thrustPoint</a>(tX:<a href="">Number</a>, tY:<a href="">Number</a>, p:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Similar to applyForcePoint, but affects the object's position rather than its acceleration.</div>
+</td><td class="summaryTableOwnerCol">WheelParticle</td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#thrustTo()">thrustTo</a>(tX:Number, tY:Number, ease:Number = 1):void</div>
+<div class="summaryTableDescription">Thrusts the object to the given position in global space
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#thrustVector()">thrustVector</a>(v:<a href="../core/Vector.html">Vector</a>):void</div>
+<div class="summaryTableDescription">Same as thrust() but takes in a vector instead of an x and y value
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#unload()">unload</a>():void</div>
+<div class="summaryTableDescription">Removes the object from the engine and disposes of it.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="CircleParticle.html#updateBoundingBox()">updateBoundingBox</a>():void</div>
+<div class="summaryTableDescription">Updates the bounding box of the object.</div>
+</td><td class="summaryTableOwnerCol"><a href="CircleParticle.html">CircleParticle</a></td>
+</tr>
+</table>
+</div>
+<a name="protectedMethodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Protected Methods</div>
+<div class="showHideLinks">
+<div class="hideInheritedProtectedMethod" id="hideInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(false,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/expanded.gif" class="showHideLinkImage"> Hide Inherited Protected Methods</a>
+</div>
+<div class="showInheritedProtectedMethod" id="showInheritedProtectedMethod">
+<a onclick="javascript:setInheritedVisible(true,'ProtectedMethod');" href="#protectedMethodSummary" class="showHideLink"><img src="../../../../images/collapsed.gif" class="showHideLinkImage"> Show Inherited Protected Methods</a>
+</div>
+</div>
+<table id="summaryTableProtectedMethod" class="summaryTable hideInheritedProtectedMethod" cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#afterCollision()">afterCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action after a collision is resolved
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#afterIntegrate()">afterIntegrate</a>(dt:Number):void</div>
+<div class="summaryTableDescription">Override this method to perform checks after the object is integrated on every frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#afterUnload()">afterUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions after the object has been unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#beforeIntegrate()">beforeIntegrate</a>(dt:Number):void</div>
+<div class="summaryTableDescription">Override this method to perform checks before the object is integrated on every frame.</div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onCollision()">onCollision</a>(data:<a href="../collisions/CollisionData.html">CollisionData</a>):void</div>
+<div class="summaryTableDescription">Override this function to perform an action at the time a collision is detected
+   </div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../core/CollisionObject.html#onUnload()">onUnload</a>():void</div>
+<div class="summaryTableDescription">Override this method to perform actions once the object is unloaded.</div>
+</td><td class="summaryTableOwnerCol"><a href="../core/CollisionObject.html">CollisionObject</a></td>
+</tr>
+<tr class="hideInheritedProtectedMethod">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol"><img class="inheritedSummaryImage" title="Inherited" alt="Inherited" src="../../../../images/inheritedSummary.gif"></td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="../primitives/Particle.html#setMaxVel()">setMaxVel</a>(v:Number):void</div>
+<div class="summaryTableDescription"></div>
+</td><td class="summaryTableOwnerCol"><a href="../primitives/Particle.html">Particle</a></td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="propertyDetail"></a>
+<div class="detailSectionHeader">Property detail</div>
+<a name="angle"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">angle</td><td class="detailHeaderType">property</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>angle:Number</code>&nbsp;&nbsp;[read-write]<p>The absolute angle of the wheel in degrees.
+   </p><span class="label">Implementation</span>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function get angle():Number</code>
+<br>
+<code>&nbsp;&nbsp;&nbsp;&nbsp;public function set angle(value:Number):void</code>
+<br>
+</div>
+<a name="constructorDetail"></a>
+<div class="detailSectionHeader">Constructor detail</div>
+<a name="WheelParticle()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">WheelParticle</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">constructor</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function WheelParticle(x:Number, y:Number, r:Number)</code><p>Creates a WheelParticle
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">x</span>:Number</code> &mdash; Global x position of the wheel
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">y</span>:Number</code> &mdash; Global y position of the wheel
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code> &mdash; Radius of the wheel
+   </td>
+</tr>
+</table>
+</div>
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="applyForcePoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">applyForcePoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function applyForcePoint(force:<a href="../core/Vector.html">Vector</a>, p:<a href="../core/Vector.html">Vector</a>):void</code><p>Applies a force at the given point on the rim of the circle
+   Unlike applyForce(), this method applies only the force perpendicular to the collision normal, which yields more accurate looking results.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">force</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector representing the force to apply.
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; position in global space, which should lie on the rim of the circle. It will still work if it doesn't, but may yield weird results.
+   </td>
+</tr>
+</table>
+</div>
+<a name="dispose()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">dispose</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function dispose():void</code><p>
+   </p></div>
+<a name="getMaxSpeed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">getMaxSpeed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function getMaxSpeed():Number</code><p>Returns the maximum rotational speed of the wheel in degrees.
+   </p><p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code>Number</code></td>
+</tr>
+</table>
+</div>
+<a name="integrate()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">integrate</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function integrate(dt:<a href="">Number</a> = 1):void</code><p>Integrates the object. This is an internal methods that's called on every frame--calling it manually will probably have no positive affects.<br>
+   If you would like to perform checks every time the object move, do not override this method. Instead override beforeIntegrate() and afterIntegrate().
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">dt</span>:<a href="">Number</a></code> (default = <code>1</code>)<code></code> &mdash; the amount of times in seconds to integrate.
+   </td>
+</tr>
+</table>
+</div>
+<a name="render()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">render</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function render(g:<a href="">Graphics</a>):void</code><p>Renders a primitive shape of the object to the given Graphics object.
+   Usually this method is automatically invoked by the engine, but you may use it to render individual objects.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">g</span>:<a href="">Graphics</a></code></td>
+</tr>
+</table>
+</div>
+<a name="rotateWheel()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">rotateWheel</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function rotateWheel(r:Number):void</code><p>
+   Rotates the wheel with the given degree value.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="setMaxSpeed()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setMaxSpeed</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public function setMaxSpeed(s:Number):void</code><p>Sets the maximum rotational speed of the wheel in degrees.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">s</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="setRadius()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">setRadius</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function setRadius(r:Number):void</code><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">r</span>:Number</code></td>
+</tr>
+</table>
+</div>
+<a name="solveReactions()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">solveReactions</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function solveReactions():void</code><p>
+   </p></div>
+<a name="thrustPoint()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">thrustPoint</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public override function thrustPoint(tX:<a href="">Number</a>, tY:<a href="">Number</a>, p:<a href="../core/Vector.html">Vector</a>):void</code><p>Similar to applyForcePoint, but affects the object's position rather than its acceleration.
+   This can be used for impulses, but may cause penetration with other objects, while applyForcePoint() shouldn't.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">tX</span>:<a href="">Number</a></code> &mdash; The thrust's x-component
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">tY</span>:<a href="">Number</a></code> &mdash; The thrust's y-component
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">p</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A point in global space at which the thrust will be applied. The point should lie on the rim of the circle.
+   </td>
+</tr>
+</table>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->

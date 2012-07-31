@@ -1,0 +1,310 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="../../../../style.css" type="text/css" media="screen">
+<link rel="stylesheet" href="../../../../print.css" type="text/css" media="print">
+<meta content="Raycaster,com.fileitup.fisixengine.utils.Raycaster,raycastParticles,raycastSurfaces,raycastAll" name="keywords">
+<title>com.fileitup.fisixengine.utils.Raycaster</title>
+</head>
+<body>
+<script type="text/javascript" language="javascript" src="../../../../asdoc.js"></script><script type="text/javascript" language="javascript" src="../../../../cookies.js"></script><script type="text/javascript" language="javascript">
+<!--
+				asdocTitle = 'Raycaster - Fisix Engine 0.5a Documentation';
+				var baseRef = '../../../../';
+				window.onload = configPage;
+			--></script>
+<table style="display:none" id="titleTable" cellspacing="0" cellpadding="0" class="titleTable">
+<tr>
+<td align="left" class="titleTableTitle">Fisix Engine Alpha Documentation</td><td align="right" class="titleTableTopNav"><a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../package-summary.html">All&nbsp;Packages</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../all-classes.html')" href="../../../../class-summary.html">All&nbsp;Classes</a>&nbsp;|&nbsp;<a onclick="loadClassListFrame('../../../../index-list.html')" href="../../../../all-index-A.html">Index</a>&nbsp;|&nbsp;<a href="../../../../index.html?com/fileitup/fisixengine/utils/Raycaster.html&amp;com/fileitup/fisixengine/utils/class-list.html" id="framesLink1">Frames</a><a onclick="parent.location=document.location" href="" style="display:none" id="noFramesLink1">No&nbsp;Frames</a></td><td rowspan="3" align="right" class="titleTableLogo"><img alt="Adobe Logo" title="Adobe Logo" class="logoImage" src="../../../../images/logo.jpg"></td>
+</tr>
+<tr class="titleTableRow2">
+<td align="left" id="subTitle" class="titleTableSubTitle">Class&nbsp;Raycaster</td><td align="right" id="subNav" class="titleTableSubNav"><a href="#methodSummary">Methods</a></td>
+</tr>
+<tr class="titleTableRow3">
+<td colspan="2">&nbsp;</td>
+</tr>
+</table>
+<script type="text/javascript" language="javascript">
+<!--
+if (!isEclipse() || window.name != ECLIPSE_FRAME_NAME) {titleBar_setSubTitle("Class Raycaster"); titleBar_setSubNav(false,false,false,false,false,false,true,false,false,false,false,false,false,false);}
+--></script>
+<div class="MainContent">
+<table cellspacing="0" cellpadding="0" class="classHeaderTable">
+<tr>
+<td class="classHeaderTableLabel">Package</td><td><a onclick="javascript:loadClassListFrame('class-list.html')" href="package-detail.html">com.fileitup.fisixengine.utils</a></td>
+</tr>
+<tr>
+<td class="classHeaderTableLabel">Class</td><td class="classSignature">public final  class Raycaster</td>
+</tr>
+</table>
+<p></p>Used to find the closest object between a starting point to an ending point.
+  The methods in this class provide you with the following:<br>
+  - The object that the ray intersects with first<br>
+  - The point on the object where it intersects<br>
+  <p></p>
+<br>
+<hr>
+</div>
+<a name="methodSummary"></a>
+<div class="summarySection">
+<div class="summaryTableTitle">Public Methods</div>
+<table id="summaryTableMethod" class="summaryTable " cellpadding="3" cellspacing="0">
+<tr>
+<th>&nbsp;</th><th colspan="2">Method</th><th class="summaryTableOwnerCol">Defined&nbsp;by</th>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#raycastAll()">raycastAll</a>(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a>
+</div>
+<div class="summaryTableDescription">[static]Checks intersection with all objects in the given FisixObject.</div>
+</td><td class="summaryTableOwnerCol">Raycaster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#raycastParticles()">raycastParticles</a>(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a>
+</div>
+<div class="summaryTableDescription">[static]Checks intersection with all particles in the given FisixObject who's radius is greater than 0.</div>
+</td><td class="summaryTableOwnerCol">Raycaster</td>
+</tr>
+<tr class="">
+<td class="summaryTablePaddingCol">&nbsp;</td><td class="summaryTableInheritanceCol">&nbsp;</td><td class="summaryTableSignatureCol">
+<div class="summarySignature">
+<a class="signatureLink" href="#raycastSurfaces()">raycastSurfaces</a>(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a>
+</div>
+<div class="summaryTableDescription">[static]Checks intersection with all surfaces in the given FisixObject.</div>
+</td><td class="summaryTableOwnerCol">Raycaster</td>
+</tr>
+</table>
+</div>
+<script type="text/javascript" language="javascript">
+<!--
+showHideInherited();
+--></script>
+<div class="MainContent">
+<a name="methodDetail"></a>
+<div class="detailSectionHeader">Method detail</div>
+<a name="raycastAll()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">raycastAll</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function raycastAll(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a></code><p>Checks intersection with all objects in the given FisixObject.
+   This is a combination of raycastSurfaces() and raycastParticles()
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">container</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; A FisixObject which holds the objects you'd like to check against. In most cases, this will be an instance of FisixEngine
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">start</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying the starting point of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">end</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying where the ray ends. you can also make it infinite through the infiniteRay argument (see below)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rad</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">infiniteRay</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; When set to true, the ray checks for intersection beyond the specified end point
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If the raytracing is recursive, the ray will check intersection with all children FisixObjects of the given FisixObject. If you are unsure which to use, leave it as true.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../utils/RaycastData.html">RaycastData</a></code> &mdash; 
+                        The object that intersected first and the position of the collision. If there was no intersection, returns null.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../utils/Raycaster.html#raycastParticles()" target="">raycastParticles()</a>
+<br>
+<a href="../utils/Raycaster.html#raycastSurfaces()" target="">raycastSurfaces()</a>
+</div>
+</div>
+<a name="raycastParticles()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">raycastParticles</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function raycastParticles(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a></code><p>Checks intersection with all particles in the given FisixObject who's radius is greater than 0.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">container</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; A FisixObject which holds the objects you'd like to check against. In most cases, this will be an instance of FisixEngine
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">start</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying the starting point of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">end</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying where the ray ends. you can also make it infinite through the infiniteRay argument (see below)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rad</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">infiniteRay</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; When set to true, the ray checks for intersection beyond the specified end point
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If the raytracing is recursive, the ray will check intersection with all children FisixObjects of the given FisixObject. If you are unsure which to use, leave it as true.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../utils/RaycastData.html">RaycastData</a></code> &mdash; 
+                        The object that intersected first and the position of the collision. If there was no intersection, returns null.
+   
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../utils/Raycaster.html#raycastSurfaces()" target="">raycastSurfaces()</a>
+<br>
+<a href="../utils/Raycaster.html#raycastAll()" target="">raycastAll()</a>
+</div>
+</div>
+<a name="raycastSurfaces()"></a>
+<table cellspacing="0" cellpadding="0" class="detailHeader">
+<tr>
+<td class="detailHeaderName">raycastSurfaces</td><td class="detailHeaderParens">()</td><td class="detailHeaderType">method</td><td class="detailHeaderRule">&nbsp;</td>
+</tr>
+</table>
+<div class="detailBody">
+<code>public static function raycastSurfaces(container:<a href="../core/FisixObject.html">FisixObject</a>, start:<a href="../core/Vector.html">Vector</a>, end:<a href="../core/Vector.html">Vector</a>, rad:Number = 0, infiniteRay:Boolean = false, recursive:Boolean = true):<a href="../utils/RaycastData.html">RaycastData</a></code><p>Checks intersection with all surfaces in the given FisixObject.
+   </p><span class="label">Parameters</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20px"></td><td><code><span class="label">container</span>:<a href="../core/FisixObject.html">FisixObject</a></code> &mdash; A FisixObject which holds the objects you'd like to check against. In most cases, this will be an instance of FisixEngine
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">start</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying the starting point of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">end</span>:<a href="../core/Vector.html">Vector</a></code> &mdash; A vector specifying where the ray ends. you can also make it infinite through the infiniteRay argument (see below)
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">rad</span>:Number</code> (default = <code>0</code>)<code></code> &mdash; The radius of the ray
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">infiniteRay</span>:Boolean</code> (default = <code>false</code>)<code></code> &mdash; When set to true, the ray checks for intersection beyond the specified end point
+   </td>
+</tr>
+<tr>
+<td class="paramSpacer">&nbsp;</td>
+</tr>
+<tr>
+<td width="20px"></td><td><code><span class="label">recursive</span>:Boolean</code> (default = <code>true</code>)<code></code> &mdash; If the raytracing is recursive, the ray will check intersection with all children FisixObjects of the given FisixObject. If you are unsure which to use, leave it as true.
+   </td>
+</tr>
+</table>
+<p></p>
+<span class="label">Returns</span>
+<table border="0" cellspacing="0" cellpadding="0">
+<tr>
+<td width="20"></td><td><code><a href="../utils/RaycastData.html">RaycastData</a></code> &mdash; 
+                        The object that intersected first and the position of the collision. If there was no intersection, returns null.
+   
+                        
+                     </td>
+</tr>
+</table>
+<p>
+<span class="label">See also</span>
+</p>
+<div class="seeAlso">
+<a href="../utils/Raycaster.html#raycastParticles()" target="">raycastParticles()</a>
+<br>
+<a href="../utils/Raycaster.html#raycastAll()" target="">raycastAll()</a>
+</div>
+</div>
+<br>
+<br>
+<hr>
+<br>
+<p></p>
+<center class="copyright">FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.com<br>Thu Dec 14 2006, 9:48 PM GMT-05:00 </center>
+</div>
+</body>
+</html>
+<!--FisixEngine 0.5a Documentation. For more engine support, visit www.fisixengine.comThu Dec 14 2006, 9:48 PM GMT-05:00 -->
